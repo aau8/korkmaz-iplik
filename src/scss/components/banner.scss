@@ -1,0 +1,130 @@
+.banner {
+
+    &_consult {
+
+        & .banner__form {
+            margin-top: 32px;
+        }
+
+        & .banner__body {
+            min-height: 443px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media (max-width: $tablet) {
+                min-height: auto;
+                padding: 100px 32px 32px;
+            }
+
+            @media (max-width: $mobile-l) {
+                padding: 70px 24px 24px ;
+            }
+        }
+    }
+}
+
+.banner__container {
+
+}
+
+.banner__body {
+    border-radius: $radius-l;
+    padding: 32px 108px;
+}
+
+.b-consult__info {
+    max-width: 614px;
+    width: 100%;
+}
+
+.banner__content {
+
+}
+
+.banner__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: lhperc(34, 42);
+
+    @media (max-width: $tablet) {
+        font-size: 30px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 26px;
+        color: $light;
+    }
+}
+
+.banner__text {
+    font-size: 12px;
+    color: $text-primary-6;
+    margin-top: 16px;
+
+    @media (max-width: $mobile-l) {
+        color: $light;
+        line-height: 1.6;
+    }
+}
+
+.banner__form {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background: $light;
+    border-radius: 100px;
+    padding: 9px;
+
+    @media (max-width: 600px) {
+        height: auto;
+        flex-direction: column;
+        background: none;
+        padding: 0;
+    }
+}
+
+.banner__form-tf {
+    height: 100%;
+    border-radius: 50px;
+
+    & input {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 600px) {
+        height: 48px;
+    }
+}
+
+.banner__submit {
+
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+.banner__agree {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: $text-primary-6;
+    line-height: lhperc(11, 18);
+    margin-top: 20px;
+
+    &::before {
+        content: '';
+        display: block;
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M8 0C3.58862 0 0 3.58862 0 8C0 12.4114 3.58862 16 8 16C12.4114 16 16 12.4114 16 8C16 3.58862 12.4114 0 8 0Z\" fill=\"%232C2D2E\"/%3E%3Cpath d=\"M12.0542 6.3042L7.72083 10.6375C7.59082 10.7675 7.42017 10.8329 7.24951 10.8329C7.07886 10.8329 6.9082 10.7675 6.7782 10.6375L4.61157 8.47083C4.35083 8.21021 4.35083 7.78882 4.61157 7.5282C4.87219 7.26746 5.29346 7.26746 5.5542 7.5282L7.24951 9.22351L11.1116 5.36157C11.3722 5.10083 11.7935 5.10083 12.0542 5.36157C12.3148 5.62219 12.3148 6.04346 12.0542 6.3042Z\" fill=\"white\"/%3E%3C/svg%3E");
+        margin-right: 12px;
+    }
+
+    @media (max-width: $mobile-l) {
+        color: $light;
+    }
+}

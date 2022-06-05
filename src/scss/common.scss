@@ -1,3 +1,54 @@
+// Разметка
+.grid-only-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+
+    @media (max-width: 1200px) {
+        gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+        gap: 16px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+
+        & > * {
+
+            &:first-child {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+
+        & > * {
+
+            &:first-child {
+                grid-column: auto;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+
+// Логотип
+.logo {
+    display: block;
+    aspect-ratio: 1 / 1.1;
+
+    &.is-multiply {
+        mix-blend-mode: multiply;
+    }
+}
+
 // Бургер 
 .burger {
     position: relative;
@@ -9,7 +60,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 40%;
+        width: 50%;
         height: 2px;
         display: block;
         background: $text-primary;
@@ -51,10 +102,10 @@
 
 // Раздел
 .section {
-    margin: 120px 0;
+    margin: 100px 0;
 
     @media (max-width: $mobile-l) {
-        margin: 80px 0;
+        margin: 60px 0;
     }
 }
 
@@ -75,22 +126,131 @@
 
 // Шапка раздела
 .s-header {
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 40px;
+    }
 
     @media (max-width: $mobile-l) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    &.is-light {
+        filter: contrast(0%) brightness(2);
     }
 }
 
-.s-header__title {
-    
+.s-header__content {
+    margin-right: 24px;
 }
 
-.s-header__subtitle {
-    
+.s-header__label {
+    font-weight: 500;
+    color: $text-primary-8;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.s-header__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: lhperc(34, 42);
+
+    @media (max-width: $tablet) {
+        font-size: 30px;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 26px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 24px;
+    }
 }
 
 .s-header__text {
-    
+    font-size: 15px;
+    color: $text-primary-6;
+    margin-top: 8px;
+
+    @media (max-width: $mobile-l) {
+        font-size: 13px;
+        line-height: 1.6;
+    }
 }
 //========================================================================================================================================================
+
+// Размеры иконок
+.icon {
+    display: inline-block;
+}
+
+// Маленькая
+.icon_s {
+    min-width: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+// Средняя
+.icon_m {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+// Большая
+.icon_l {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+// Огромная
+.icon_h {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+}
+//========================================================================================================================================================
+
+
+// Список с соц. сетями
+.socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -5px -10px;
+}
+
+.social__link {
+    margin: 5px 10px;
+
+    & svg {
+        fill: $accent;
+        transition: $tr;
+    }
+
+    &:active {
+
+    }
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            
+            & svg {
+                fill: $accent-second;
+            }
+        }
+
+        &:active {
+
+        }
+    }
+}

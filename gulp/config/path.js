@@ -30,8 +30,8 @@ export default {
         scss: `${srcFolder}/scss/**/*.{scss,sass,css}`,
         html: `${srcFolder}/**/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-        convertImages: `convert-images/**/*.*`,
         svg: `${srcFolder}/img/**/*.svg`,
+        convertImages: `convert-images/**/*.*`,
         resources: `${srcFolder}/resources/**/*.*`,
     },
 

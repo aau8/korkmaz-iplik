@@ -1,67 +1,106 @@
-// Поле ввода
 .tf {
+    --tf-height: 60px;
     position: relative;
     width: 100%;
-    
-    &.has-change-label {
-
-        & .tf__field label {
-            top: 0;
-            transform: translate(-16%, 0) scale(0.7);
-        }
-    }
-}
-
-.tf__field {
-    position: relative;
-    width: 100%;
+    height: var(--tf-height);
     display: flex;
     align-items: center;
-    background: none;
+    background: $light;
+    // border: 1px solid $border-card;
+    border-radius: 5px;
+    overflow: hidden;
 
-    &_textarea {
-        height: 80px;
+    & input,
+    & textarea {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        background: none;
+        padding: 0 20px;
+
+        &:focus {
+            outline: none;
+        }
+
+        @media (max-width: $mobile-l) {
+            --tf-height: 50px;
+        }
     }
-}
 
-.tf__field input,
-.tf__field textarea {
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
-    background: none;
-    border-bottom: 1px solid #fff;
-    padding: 24px 0 4px 0;
-}
+    & textarea {
+        height: 80%;
+        padding: 16px 24px;
+        resize: none;
 
-.tf__field label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 100;
-    color: #fff;
-    pointer-events: none;
-    transition: $tr;
-}
-
-.tf__field_textarea {
-
-    & label {
-        top: 14px;
-        transform: translate(0, 0);
+        @include scrollbar(4px, 100%, #fff, rgba(255,255,255,.1))
     }
-}
 
-._textfield-error {
-    
-    &::after {
-        content: attr(data-textfield-error);
-        display: inline-block;
+    & .tf__label {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 20px;
+        transform: translate(0, -50%);
         font-size: 12px;
-        margin-top: 6px;
-        color: $error;
+        font-weight: 400;
+        color: $text-primary-6;
+        // opacity: .5;
+        transition: $tr;
+        pointer-events: none;
+
+        // @media (max-width: $mobile-l) {
+        //     font-size: 15px;
+        //     transform: translate(0, -10px);
+        // }
     }
+
+    &.has-change-label {
+
+        & .tf__label {
+            transform: translate(100px, -50%);
+            opacity: 0;
+        }
+    }
+
+    // &[data-required] {
+        
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //         top: calc(var(--tf-height) / 2);
+    //         right: 24px;
+    //         transform: translate(0, -50%);
+    //         width: 8px;
+    //         height: 8px;
+    //         display: block;
+    //         background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M8 3.13846V4.86154L5.32353 4.76923L6.85294 7.07692L5.35294 8L4 5.50769L2.64706 8L1.14706 7.07692L2.67647 4.76923L0 4.86154V3.13846L2.67647 3.23077L1.14706 0.923076L2.64706 0L4 2.49231L5.35294 0L6.85294 0.923076L5.32353 3.23077L8 3.13846Z\" fill=\"%23FF372B\" fill-opacity=\"0.7\"/%3E%3C/svg%3E");
+    //         pointer-events: none;
+    //     }
+
+    //     & .tf__label {
+    //         padding-right: 42px;
+    //     }
+
+    //     & input,
+    //     & textarea {
+    //         padding-right: 48px;
+    //     }
+    // }
 }
+
+// .tf__symbols {
+//     position: absolute;
+//     bottom: 15px;
+//     left: 24px;
+//     font-size: 12px;
+//     font-weight: 400;
+//     opacity: .5;
+
+//     & span {
+//         font-size: inherit;
+//         box-shadow: inset 0 -1px $text-primary;
+//     }
+// }

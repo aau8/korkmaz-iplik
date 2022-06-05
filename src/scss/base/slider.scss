@@ -1,0 +1,97 @@
+.swiper-slider {
+    overflow: hidden;
+
+    &.swiper-initialized {
+
+        & .swiper-slide {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $container-width + 'px') {
+        overflow: initial;
+    }
+}
+
+.swiper-slide {
+    opacity: 0;
+    transition: opacity $tr;
+}
+
+.arrow-slider {
+
+}
+
+// TODO: Фиксирование стрелок на больших экранах
+.arrows-slider_fixed {
+
+    & .arrow-slider {
+        // position: absolute;
+
+        &_prev {
+
+        }
+
+        &_next {
+
+        }
+    }
+}
+
+.arrow-slider {
+
+    &.swiper-button-disabled {
+        opacity: .3;
+    }
+
+    &.swiper-button-lock {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.arrow-slider_round {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: $tr;
+
+    & svg {
+        width: 35%;
+        height: 35%;
+    }
+
+    @media (max-width: $tablet) {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    @media (max-width: $mobile-l) {
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    &:active {
+        border-color: create-rgba($text-primary, .2);
+    }
+    
+    @media (any-hover: hover) {
+        
+        &:hover {
+            border-color: create-rgba($text-primary, .1);
+        }
+        
+        &:active {
+            border-color: create-rgba($text-primary, .2);
+            background: create-rgba($text-primary, .05);
+        }
+    }
+}

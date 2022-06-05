@@ -4,49 +4,60 @@
 @import "./mixins";
 
 // Шрифты
-// @include font('Gilroy', normal, 400, '../resources/fonts/Gilroy/Gilroy-Regular.woff2');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 
 // Переменные
 // Текст
-$text-primary: #333;
-$text-second: brig-color($text-primary, .7);
-$text-accent: #FFCD6D;
-$link-active: brig-color(#FFCD6D, active);
+$text-primary: #2C2D2E;
+$text-primary-8: create-rgba($text-primary, .8);
+$text-primary-6: create-rgba($text-primary, .6);
+$text-primary-4: create-rgba($text-primary, .4);
+$light: #fff;
+$accent: $text-primary;
+$accent-second: #FDAC19;
 
 // Задний фон разделов
-// $frame-dark: #080A0A;
-// $frame-light: #0E1010;
+$frame-dark: #313131;
+$frame-light: #F5F5F5;
 
-// Обводка
-$border-line: #cecece;
-$input-placeholder: brig-color(#000, .3);
+// Инпуты и кнопки
+$arrow-bg: #F2F2F2;
+$border-line: #999999;
+$input-placeholder: #808182;
+
+// Радиусы
+$radius-m: 14px;
+$radius-l: 20px;
+
+// Тени
+$shadow-card: 0px 8px 20px rgba(0, 0, 0, 0.06);
+$shadow-active-yarn: 0px 10px 20px rgba(0, 0, 0, 0.12);
 
 $error: #EB5757;
-
-// Текстовые поля
-$tf-label: $text-second;
-
 // ================ Colors End ================
 
 
 // ================ Responsive Start ================
 $min-width: 320px;
 $max-width: 1920px;
-$max-width-container: 1200;
-$container-padding: 24;
+$max-width-container: 1480;
+$container-padding: 48;
 $container-width: $max-width-container + $container-padding;
 
-$laptop-l: 1440px;
-$laptop: 1024px;
-$tablet: 768px;
-$mobile-l: 425px;
-$mobile-m: 375px;
-$mobile-s: 320px;
+$laptop-l: 1500px;
+$laptop: 1100px;
+$tablet: 800px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+$hide-menu: $laptop;
 // ================ Responsive End ================
 
 
 // ================ Other Start ================
-$ff-main: sans-serif;
+$ff-main: 'Ubuntu', sans-serif;
+$ff-button: 'Lato', sans-serif;
 $tr: .3s;
 // ================ Other End ================
 //========================================================================================================================================================
@@ -55,6 +66,8 @@ $tr: .3s;
 @import "./reset";
 
 body {
+    background: #fafafa;
+    // background: $frame-dark;
 
     ._lock & {
         overflow: hidden;
@@ -91,7 +104,14 @@ body {
     @if ($container-padding>0) {
         padding: 0 rem(math.div($container-padding, 2));
     }
+
+    @media (max-width: $mobile-l) {
+        padding: 0 rem(16);
+    }
 }
+
+// Библиотеки
+@import "./libs/swiper";
 
 // Общие стили проекта
 @import "./common";
@@ -99,9 +119,22 @@ body {
 // Базовые стили, шаблоны, заготовки
 @import "./base";
 
+// Компоненты
+@import "./components/banner";
+
+// Карточки
+@import "./components/cards/c-cat";
+@import "./components/cards/c-product";
+@import "./components/cards/c-advant";
+@import "./components/cards/c-post";
+
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
+@import "./sections/s-best";
+@import "./sections/s-cat";
+@import "./sections/s-about";
+@import "./sections/s-news";
 @import "./sections/footer";
 
 

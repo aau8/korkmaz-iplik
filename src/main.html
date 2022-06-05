@@ -11,8 +11,354 @@
 	<div class="wrapper">
         @@include('html/header.html',{})
 
-		<main class="main"></main>
-		<div class="content"></div>
+		<main class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <div class="main__info">
+                        <span class="main__label">Новая коллекция 2022</span>
+                        <h1 class="main__title">Пряжа из Турции для производства трикотажа</h1>
+                        <p class="main__text">Высокообъёмная, приятная на ощупь, лишённая синтетического блеска пряжа</p>
+                        <a href="#" class="btn is-fill main__catalog">Каталог</a>
+                    </div>
+                    <div class="socials main__socials">
+                        <a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#whatsapp'></use></svg></a>
+                        <a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#telegram'></use></svg></a>
+                        <a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+                        <a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#facebook'></use></svg></a>
+                    </div>
+                </div>
+                <div class="main-slider">
+                    <div class="main-slider__wrap">
+                        <div class="main-slider__tools">
+                            <button class="icon icon_m main-slider__arrow main-slider__arrow_prev"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <div class="main-slider__pagination"></div>
+                            <button class="icon icon_m main-slider__arrow main-slider__arrow_next"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                        <div class="swiper-slider main-slider__container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="@img/main/1.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="@img/main/2.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="@img/main/3.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#categories" class="scroll-down">
+                        <div class="scroll-down__icon">
+                            <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.64645 21.3536C4.84171 21.5488 5.15829 21.5488 5.35355 21.3536L8.53553 18.1716C8.7308 17.9763 8.7308 17.6597 8.53553 17.4645C8.34027 17.2692 8.02369 17.2692 7.82843 17.4645L5 20.2929L2.17157 17.4645C1.97631 17.2692 1.65973 17.2692 1.46447 17.4645C1.2692 17.6597 1.2692 17.9763 1.46447 18.1716L4.64645 21.3536ZM4.5 1L4.5 21H5.5L5.5 1H4.5Z" fill="#2C2D2E"/>
+                            </svg>                                
+                        </div>
+                        <span class="scroll-down__text">Листайте вниз</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+		<div class="content">
+            <section class="section s-cat">
+                <div class="s-cat__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Категории</h2>
+                        </div>
+                        <div class="s-cat__arrows">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-cat__arrow s-cat__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-cat__arrow s-cat__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="swiper-slider s-cat__body">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="c-cat">
+                                    <div class="c-cat__img"><img src="@img/categories/1.jpg" alt=""></div>
+                                    <div class="c-cat__content">
+                                        <span class="c-cat__title">Верхний трикотаж</span>
+                                        <span class="c-cat__more">Перейти</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="c-cat">
+                                    <div class="c-cat__img"><img src="@img/categories/2.jpg" alt=""></div>
+                                    <div class="c-cat__content">
+                                        <span class="c-cat__title">Головные уборы</span>
+                                        <span class="c-cat__more">Перейти</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="c-cat">
+                                    <div class="c-cat__img"><img src="@img/categories/3.jpg" alt=""></div>
+                                    <div class="c-cat__content">
+                                        <span class="c-cat__title">Детский трикотаж</span>
+                                        <span class="c-cat__more">Перейти</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="c-cat">
+                                    <div class="c-cat__img"><img src="@img/categories/4.jpg" alt=""></div>
+                                    <div class="c-cat__content">
+                                        <span class="c-cat__title">Фантазийная пряжа</span>
+                                        <span class="c-cat__more">Перейти</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="c-cat">
+                                    <div class="c-cat__img"><img src="@img/categories/5.jpg" alt=""></div>
+                                    <div class="c-cat__content">
+                                        <span class="c-cat__title">Носки</span>
+                                        <span class="c-cat__more">Перейти</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s-best">
+                <div class="s-best__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Лидеры продаж</h2>
+                            <p class="s-header__text">Наиболее популярные модели из всех категорий интернет-магазина</p>
+                        </div>
+                        <div class="s-cat__arrows arrows-slider_fixed">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-best__arrow s-best__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-best__arrow s-best__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="s-best__body">
+                        <div class="swiper-slider s-best__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="link-arrow s-best__more">
+                            Весь каталог
+                            <span class="link-arrow__icon">
+                                <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="section s-about">
+                <div class="s-about__container">
+                    <div class="s-about__body">
+                        <div class="s-about__img"><img src="@img/about/1.jpg" alt=""></div>
+                        <div class="s-about__content">
+                            <div class="s-about__label">О нас</div>
+                            <h2 class="s-about__title">korkmaziplik</h2>
+                            <div class="s-about__text">
+                                <p>
+                                    Компания “Коркмаз иплик” уже больше <strong>12 лет</strong> занимает одну из ведущих позиций среди поставщиков лучших сортов турецкой пряжи из  натуральных, искусственных и смешанных волокон для трикотажного производства. Мы работаем с такими фабриками как: <strong>Esra, Sireci, Riteks, Akal, Akren и Midas</strong>, продукция которых уже давно заслужено завоевала авторитет среди отечественных производителей трикотажа.
+                                    <br><br>
+                                    Относительно более детальной информации обращайтесь по указанным телефонам, будем рады сотрудничеству с Вами!!!
+                                </p>
+                            </div>
+                            <a href="#" class="link-arrow is-light s-about__more">
+                                Подробнее о компании
+                                <span class="link-arrow__icon">
+                                    <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s-advant">
+                <div class="s-advant__container">
+                    <div class="s-header is-light">
+                        <div class="s-header__content">
+                            <span class="s-header__label">Почему именно мы</span>
+                            <h2 class="s-header__title">Преимущества</h2>
+                        </div>
+                    </div>
+                    <div class="grid-only-3 s-advant__body">
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/1.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/yarn.svg" alt=""></div>
+                                    <p class="c-advant__text">Мы доставляем пряжу из Турции по всему миру</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/2.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/paper.svg" alt=""></div>
+                                    <p class="c-advant__text">Мы гарантируем качество нашей пряжи</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/3.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/tag.svg" alt=""></div>
+                                    <p class="c-advant__text">Самая приятная цена Турецкой пряжи на российском рынке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s-partners">
+                <div class="s-partners__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Партнеры</h2>
+                            <p class="s-header__text">Компании, которые используют нашу продукцию  </p>
+                        </div>
+                        <div class="s-cat__arrows">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-partners__arrow s-partners__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-partners__arrow s-partners__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="swiper-slider s-partners__body">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="@img/partners/1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/3.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/5.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/5.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section banner banner_consult">
+                <div class="banner__container">
+                    <div class="banner__body" style="background-image: url('@img/banner/consultation.jpg');">
+                        <div class="b-consult__info">
+                            <div class="banner__content">
+                                <h2 class="banner__title">Консультация по товарам</h2>
+                                <p class="banner__text">Мы поможем вам и ответим на все вопросы!</p>
+                            </div>
+                            <form action="#" class="banner__form">
+                                <label class="tf banner__form-tf">
+                                    <div class="tf__field">
+                                        <input type="text" name="tel-or-email">
+                                        <span class="tf__label">Ваш номер телефона или E-mail</span>
+                                    </div>
+                                </label>
+                                <button class="btn is-fill banner__submit">Заказать звонок</button>
+                            </form>
+                            <span class="banner__agree">Нажимая на кнопку “Заказать звонок” я согласен но обработку персональных данных</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section s-news" id="categories">
+                <div class="s-news__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Наш блог</h2>
+                        </div>
+                        <div class="s-header__more">
+                            <a href="#" class="link-arrow">
+                                Весь каталог
+                                <span class="link-arrow__icon">
+                                    <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid-only-3 s-news__body">
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/1.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/2.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/3.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
         
         @@include('html/footer.html',{})
 	</div>

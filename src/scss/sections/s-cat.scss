@@ -1,0 +1,15 @@
+.s-cat {
+    margin-top: 24px;
+}
+
+.s-cat__body {
+
+    @media (max-width: 450px) {
+        overflow: initial;
+    }
+}
+
+.s-cat__arrows {
+    display: flex;
+    align-items: center;
+}
