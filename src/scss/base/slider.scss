@@ -40,6 +40,11 @@
 
 .arrow-slider {
 
+    & svg {
+        fill: $accent;
+        stroke: $accent;
+    }
+
     &.swiper-button-disabled {
         opacity: .3;
     }

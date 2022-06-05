@@ -1542,6 +1542,11 @@ button.swiper-pagination-bullet {
   transition: opacity 0.3s;
 }
 
+.arrow-slider svg {
+  fill: #2C2D2E;
+  stroke: #2C2D2E;
+}
+
 .arrow-slider.swiper-button-disabled {
   opacity: 0.3;
 }
