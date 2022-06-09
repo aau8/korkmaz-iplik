@@ -1,0 +1,34 @@
+.catalog-color-main {
+    position: relative;
+    padding-bottom: 110px;
+
+    @media (max-width: $laptop) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: $tablet) {
+        padding-bottom: 60px;
+    }
+}
+
+.catalog-color-main__container {
+
+    & .s-header {
+        margin-bottom: 28px;
+    }
+
+    & .s-header__subtitle {
+        margin-top: 38px;
+    }
+}
+
+.catalog-color {
+    margin-top: 50px;
+
+    & .s-header {
+
+        @media (min-width: 801px) {
+            margin-bottom: 46px;
+        }
+    }
+}

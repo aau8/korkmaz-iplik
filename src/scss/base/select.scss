@@ -1,12 +1,14 @@
 .select {
     position: relative;
-    width: 100%;
+    // width: 100%;
+    width: fit-content;
     height: 100%;
 
     &.is-open {
 
         & .select-input__chevron {
-            transform: translate(0, -50%) scale(-1, -1);
+            // transform: translate(0, -50%) scale(-1, -1);
+            transform: scale(-1, -1);
         }
 
         & .select-dropdown{
@@ -33,50 +35,48 @@
 
 .select-input {
     position: relative;
-    width: 100%;
+    // width: 100%;
+    width: fit-content;
     height: 40px;
     display: flex;
     align-items: center;
-    border: 1px solid $border-line;
-    border-radius: 8px;
-    padding: 0;
+    font-size: 14px;
+    // border: 1px solid $border-line;
+    // border-radius: 8px;
+    // padding: 0;
     cursor: pointer;
-}
 
-.select-input__icon {
-    min-width: 30px;
-    width: 30px;
-    height: 30px;
+    @media (max-width: $mobile-l) {
+        height: 30px;
+    }
 }
 
 .select-input__title {
     color: $input-placeholder;
     pointer-events: none;
-    padding: 0 16px;
-
-    @media (max-width: $mobile-l) {
-        font-size: 16px;
-    }
+    // padding: 0 16px;
 }
 
 .select-input__chevron {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translate(0, -50%);
+    // position: absolute;
+    // top: 50%;
+    // right: 12px;
+    // transform: translate(0, -50%);
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
     pointer-events: none;
     transition: $tr;
 }
 
 .select-dropdown {
-    width: 100%;
+    // width: 100%;
+    max-height: 200px;
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 0;
+    right: 0;
     transform: translate(0, 100%);
     background: #fff;
     border-radius: 8px;
@@ -86,14 +86,19 @@
     visibility: hidden;
     pointer-events: none;
     transition: $tr;
+
+    @media (max-width: $mobile-l) {
+        right: auto;
+        left: 0;
+    }
 }
 
 .select-dropdown__list {
-    max-height: 210px;
+    max-height: 180px;
     padding: 12px 0;
     overflow-y: auto;
 
-    @include scrollbar(6px)
+    @include scrollbar(4px)
 }
 
 .select-dropdown__item {
@@ -101,32 +106,35 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: inherit;
     font-size: 14px;
     padding: 8px 16px;
     cursor: pointer;
     transition: $tr;
+    white-space: nowrap;
 
     &.is-selected {
 
-        &::before {
+        &::after {
             opacity: 1;
             visibility: visible;
         }
     }
 
-    &::before {
+    &::after {
         content: '';
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translate(0, -50%);
+        // position: absolute;
+        // top: 50%;
+        // right: 20px;
+        // transform: translate(0, -50%);
         display: inline-block;
         width: 16px;
         height: 16px;
         background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00002 16.2001L4.80002 12.0001L3.40002 13.4001L9.00002 19.0001L21 7.0001L19.6 5.6001L9.00002 16.2001Z' fill='%236C6C6C'/%3E%3C/svg%3E") no-repeat;
         background-size: contain;
         background-position: center center;
+        margin-left: 12px;
         opacity: 0;
         visibility: hidden;
         transition: $tr;

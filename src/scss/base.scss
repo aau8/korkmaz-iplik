@@ -5,16 +5,19 @@
 @import "./base/buttons";
 
 // Поля выбора
-// @import "./base/select";
+@import "./base/select";
+
+// Чекбоксы
+@import "./base/checkbox";
 
 // Поля ввода
 @import "./base/textfield";
 
 // Модальные окна
-@import "./base/modal";
+// @import "./base/modal";
 
 // Аккордеоны (Спойлеры)
-@import "./base/accordion";
+// @import "./base/accordion";
 
 // Слайдер
 @import "./base/slider";

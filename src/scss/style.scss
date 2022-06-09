@@ -18,6 +18,8 @@ $accent: $text-primary;
 $accent-second: #FDAC19;
 
 // Задний фон разделов
+$frame-main: #fafafa;
+// $frame-main: #fff;
 $frame-dark: #313131;
 $frame-light: #F5F5F5;
 
@@ -31,7 +33,7 @@ $radius-m: 14px;
 $radius-l: 20px;
 
 // Тени
-$shadow-card: 0px 8px 20px rgba(0, 0, 0, 0.06);
+$shadow-card: 0px 8px 20px rgba(0, 0, 0, 0.1);
 $shadow-active-yarn: 0px 10px 20px rgba(0, 0, 0, 0.12);
 
 $error: #EB5757;
@@ -42,8 +44,8 @@ $error: #EB5757;
 $min-width: 320px;
 $max-width: 1920px;
 $max-width-container: 1480;
-$container-padding: 48;
-$container-width: $max-width-container + $container-padding;
+$container-padding: 24;
+$container-width: $max-width-container + $container-padding * 2;
 
 $laptop-l: 1500px;
 $laptop: 1100px;
@@ -66,27 +68,12 @@ $tr: .3s;
 @import "./reset";
 
 body {
-    background: #fafafa;
-    // background: $frame-dark;
+    background: $light;
+    overflow-x: hidden;
 
     ._lock & {
         overflow: hidden;
 		touch-action: none;
-    }
-}
-
-.wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-    & > .content {
-        flex: 1 0 auto;
-        position: relative;
-        z-index: 1;
     }
 }
 
@@ -102,13 +89,16 @@ body {
         margin: 0 auto;
     }
     @if ($container-padding>0) {
-        padding: 0 rem(math.div($container-padding, 2));
+        padding: 0 rem($container-padding);
     }
 
     @media (max-width: $mobile-l) {
         padding: 0 rem(16);
     }
 }
+
+// Анимации
+@import './animation';
 
 // Библиотеки
 @import "./libs/swiper";
@@ -120,7 +110,9 @@ body {
 @import "./base";
 
 // Компоненты
+@import "./components/breadcrumbs";
 @import "./components/banner";
+@import "./components/pagin";
 
 // Карточки
 @import "./components/cards/c-cat";
@@ -137,6 +129,9 @@ body {
 @import "./sections/s-news";
 @import "./sections/footer";
 
+@import "./sections/sidebar";
+
 
 // Стили для отдельных страниц
-// @import "./pages/";
+@import "./pages/catalog";
+@import "./pages/catalog-color";

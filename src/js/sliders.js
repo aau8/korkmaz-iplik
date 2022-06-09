@@ -74,7 +74,7 @@ const sectionCategoriesSlider = new Swiper(".s-cat__body", {
     },
 });
 
-const sectionBestSlider = new Swiper(".s-best__slider", {
+const sectionBestSlider = new Swiper(".products-slider", {
     modules: [ Navigation ],
 
     allowTouchMove: false,

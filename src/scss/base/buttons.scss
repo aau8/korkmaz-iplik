@@ -21,6 +21,10 @@
     white-space: nowrap;
     user-select: none;
 
+    & span {
+        margin: 0 .25em;
+    }
+
     @media (max-width: $tablet) {
         height: 48px;
         padding: 0 40px;
@@ -51,6 +55,11 @@
                 background: create-rgba($accent, .1);
             }
         }
+
+        // &.is-light {
+        //     color: $text-primary;
+        //     background: $light;
+        // }
     }
 
     // Кнопка с обводкой
@@ -101,6 +110,39 @@
 }
 //========================================================================================================================================================
 
+// Кнопка "Показать еще"
+.btn-more {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: $tr;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 4.25189C11 4.42129 10.924 4.58211 10.7923 4.6917L6.38057 8.36299C6.16104 8.54567 5.83896 8.54567 5.61943 8.36299L1.20766 4.6917C1.07596 4.58211 1.00003 4.42129 1 4.25189C0.99997 4.0825 1.07585 3.92165 1.20751 3.81201L1.4175 3.63714C1.63702 3.45434 1.95921 3.45428 2.1788 3.63701L6 6.81685L9.8212 3.63701C10.0408 3.45428 10.363 3.45434 10.5825 3.63714L10.7925 3.81201C10.9242 3.92165 11 4.0825 11 4.25189Z\" fill=\"%232C2D2E\"/%3E%3C/svg%3E");
+        vertical-align: middle;
+        margin: -2px 0 0 8px;
+    }
+
+    &:active {
+        opacity: .6;
+    }
+    
+    @media (any-hover: hover) {
+        
+        &:hover {
+            
+            &::after {
+                animation: iconBounce $tr linear forwards;
+            }
+        }
+    }
+}
+//========================================================================================================================================================
+
 
 // Hover-эффект у текстовых ссылок
 .link {
@@ -117,6 +159,7 @@
         color: brig-color($accent-second, active);
     }
 }
+//========================================================================================================================================================
 
 
 // Ссылка со стрелкой
@@ -133,23 +176,6 @@
         
         & .link-arrow__icon {
             background-color: brig-color($arrow-bg, 1.06);
-        }
-    } 
-
-    @media (any-hover: hover) {
-        
-        &:hover {
-            
-            & .link-arrow__icon {
-                background-color: brig-color($arrow-bg, 1.06);
-            }
-        }
-
-        &:active {
-            
-            & .link-arrow__icon {
-                background-color: $arrow-bg;
-            }
         }
     }
 
@@ -190,9 +216,57 @@
         }
     }
 
-    @media (max-width: $mobile-m) {
-        font-size: 10px;
+    &.is-reverse {
+        flex-direction: row-reverse;
+
+        & .link-arrow__icon {
+            transform: rotate(180deg);
+            margin: 0 22px 0 0;
+
+            @media (max-width: $tablet) {
+                margin-right: 12px;
+            }
+        
+            @media (max-width: $mobile-m) {
+                margin-right: 8px;
+            }
+        }
     }
+
+    &.has-light-icon {
+
+        & .link-arrow__icon {
+            background-color: $light;
+        }
+    }
+
+    @media (any-hover: hover) {
+        
+        &:hover {
+            
+            & .link-arrow__icon {
+                background-color: brig-color($arrow-bg, 1.06);
+            }
+
+            &.has-light-icon {
+            
+                & .link-arrow__icon {
+                    background-color: brig-color($arrow-bg, 1.01);
+                }
+            }
+        }
+
+        &:active {
+            
+            & .link-arrow__icon {
+                background-color: $arrow-bg;
+            }
+        }
+    }
+
+    // @media (max-width: $mobile-m) {
+        // font-size: 12px;
+    // }
 }
 
 .link-arrow__icon {
@@ -227,3 +301,62 @@
     }
 }
 //========================================================================================================================================================
+
+
+// Ссылка "Скачать"
+.link-download {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    transition: $tr;
+
+    &.is-light {
+        color: $light;
+
+        & .link-download__text {
+
+            & span {
+                opacity: .8;
+                box-shadow: inset 0 -1px create-rgba($light, .8); 
+            }
+        }
+
+        & .link-download__icon {
+
+            & svg {
+                fill: $light;
+            }
+        }
+    }
+
+    &:active {
+        opacity: .6;
+    }
+}
+
+.link-download__icon {
+    min-width: 22px;
+    width: 22px;
+    display: flex;
+    margin-right: 14px;
+
+    & svg {
+        fill: $text-primary;
+    }
+
+    @media (max-width: $mobile-l) {
+        min-width: 16px;
+        width: 16px;
+        margin-right: 10px;
+    }
+}
+
+.link-download__text {
+    font-size: 14px;
+    line-height: lhperc(14, 20);
+
+    & span {
+        opacity: .4;
+        box-shadow: inset 0 -1px $text-primary-4;
+    }
+}

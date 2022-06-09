@@ -1,0 +1,43 @@
+.breadcrumbs {
+    margin: 32px 0 12px;
+    overflow-x: auto;
+
+    @include scrollbar(100%, 4px)
+}
+
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.breadcrumbs__item {
+    --dott-margin: 14px;
+    font-size: 14px;
+    line-height: 1;
+    color: $text-primary-4;
+    white-space: nowrap;
+    
+    &:not(:last-child) {
+        padding-right: var(--dott-margin);
+        
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: $text-primary-4;
+            border-radius: 50%;
+            margin-left: var(--dott-margin);
+            vertical-align: middle;
+        }
+    }
+
+    &:last-child {
+        padding-right: $container-padding + px;
+    }
+
+    @media (max-width: $mobile-l) {
+        --dott-margin: 10px;
+    }
+}

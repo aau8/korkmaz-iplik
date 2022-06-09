@@ -1,0 +1,104 @@
+.sidebar {
+    max-width: 262px;
+    width: 100%;
+    // padding-bottom: 32px;
+
+    @media (max-width: $tablet) {
+        max-width: none;
+    }
+}
+
+.sidebar__header {
+
+    & .s-header__content {
+        margin: 0;
+    }
+
+    & .s-header__more {
+        display: none;
+
+        @media (max-width: $tablet) {
+            display: block;
+        }
+    }
+}
+
+.sidebar__content {
+    position: sticky;
+    top: 24px;
+}
+
+// Фильтр
+.filter {
+    width: 100%;
+}
+
+.filter__title {
+    margin-bottom: 24px;
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 16px;
+    }
+}
+
+.filter__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    &.is-scroll {
+        max-height: 250px;
+        padding-right: 8px;
+        @include scrollbar(4px, 100%);
+    }
+
+    & > * {
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.filter__buttons {
+    margin-top: 30px;
+
+    & > * {
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.filter__btn {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.filter__download {
+    margin-top: 36px;
+    
+    @media (any-hover: hover) {
+        
+        &:hover {
+            
+            & .filter__download-arrow {
+                animation: iconBounce $tr linear forwards;
+            }
+        }
+    
+        &:active {
+    
+        }
+    }
+
+    @media (max-width: $tablet) {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,44 @@
+.checkbox {
+    position: relative;
+    padding: 4px 0;
+}
+
+.checkbox__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+
+        & + .checkbox__title:after {
+            background-color: $text-primary;
+            border-color: $text-primary;
+        }
+    }
+}
+
+.checkbox__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $text-primary-8;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid $text-primary-4;
+        border-radius: 4px;
+        margin-left: 12px;
+        transition: .1s;
+        background: center/8px 8px no-repeat transparent url("data:image/svg+xml,%3Csvg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M7.63818 2.13818L3.30481 6.47144C3.1748 6.60144 3.00415 6.66687 2.8335 6.66687C2.66284 6.66687 2.49219 6.60144 2.36218 6.47144L0.195557 4.30481C-0.0651855 4.04419 -0.0651855 3.6228 0.195557 3.36218C0.456177 3.10144 0.877441 3.10144 1.13818 3.36218L2.8335 5.0575L6.69556 1.19556C6.95618 0.934814 7.37744 0.934814 7.63818 1.19556C7.8988 1.45618 7.8988 1.87744 7.63818 2.13818V2.13818Z\" fill=\"white\"/%3E%3C/svg%3E");
+    }
+}

@@ -1,0 +1,119 @@
+.pagin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.has-mt {
+        margin-top: 60px;
+
+        @media (max-width: $mobile-l) {
+            margin-top: 40px;
+        }
+    }
+}
+
+.pagin__list {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+
+    @media (max-width: $mobile-m) {
+        margin: 0 16px;
+    }
+}
+
+.pagin__item {
+    font-size: 16px;
+    color: $text-primary-4;
+
+    &:not(:last-child) {
+        margin-right: 18px;
+
+        @media (max-width: $mobile-m) {
+            margin-right: 12px;
+        }
+    }
+
+    &:first-child.pagin__item_current::before {
+        display: none;
+    }
+
+    &:last-child.pagin__item_current::after {
+        display: none;
+    }
+
+    @media (max-width: $mobile-s) {
+        font-size: 15px;
+    }
+}
+
+.pagin__item_current {
+    color: $text-primary;
+    white-space: nowrap;
+
+    &::before,
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 1px;
+        background: $text-primary-4;
+        vertical-align: middle;
+    }
+
+    &::before {
+        margin: 0 30px 0 12px;
+
+        @media (max-width: $mobile-m) {
+            margin: 0 24px 0 12px;
+        }
+    }
+
+    &::after {
+        margin: 0 12px 0 30px;
+
+        @media (max-width: $mobile-m) {
+            margin: 0 12px 0 24px;
+        }
+    }
+}
+
+// Кнопки
+.pagin__btn {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $tr;
+
+    & svg {
+        width: 80%;
+        height: 80%;
+    }
+
+    &:disabled {
+        opacity: .3;
+        pointer-events: none;
+    }
+    
+    &:active {
+        opacity: .8;
+    }
+    
+    @media (any-hover: hover) {
+        
+        &:hover {
+            opacity: .8;
+        }
+    
+        &:active {
+            opacity: .6;
+        }
+    }
+}
+
+.pagin__btn_prev {
+
+}

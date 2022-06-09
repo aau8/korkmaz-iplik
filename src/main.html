@@ -58,7 +58,9 @@
                 <div class="s-cat__container">
                     <div class="s-header">
                         <div class="s-header__content">
-                            <h2 class="s-header__title">Категории</h2>
+                            <div class="s-header__title-container">
+                                <h2 class="s-header__title">Категории</h2>
+                            </div>
                         </div>
                         <div class="s-cat__arrows">
                             <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-cat__arrow s-cat__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
@@ -120,16 +122,18 @@
                 <div class="s-best__container">
                     <div class="s-header">
                         <div class="s-header__content">
-                            <h2 class="s-header__title">Лидеры продаж</h2>
+                            <div class="s-header__title-container">
+                                <h2 class="s-header__title">Лидеры продаж</h2>
+                                <div class="s-cat__arrows arrows-slider_fixed">
+                                    <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-best__arrow s-best__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                    <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-best__arrow s-best__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                </div>
+                            </div>
                             <p class="s-header__text">Наиболее популярные модели из всех категорий интернет-магазина</p>
-                        </div>
-                        <div class="s-cat__arrows arrows-slider_fixed">
-                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-best__arrow s-best__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
-                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-best__arrow s-best__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
                         </div>
                     </div>
                     <div class="s-best__body">
-                        <div class="swiper-slider s-best__slider">
+                        <div class="swiper-slider products-slider s-best__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="c-product is-new has-add-favorite">
@@ -139,9 +143,10 @@
                                             <span class="c-product__structure">70% шерсть, 30% акрил</span>
                                             <span class="c-product__price">790 ₽</span>
                                             <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                            <button class="icon icon_l c-product__favorite">
-                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </button>
                                         </div>
@@ -155,9 +160,10 @@
                                             <span class="c-product__structure">70% шерсть, 30% акрил</span>
                                             <span class="c-product__price">790 ₽</span>
                                             <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                            <button class="icon icon_l c-product__favorite">
-                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </button>
                                         </div>
@@ -171,9 +177,10 @@
                                             <span class="c-product__structure">70% шерсть, 30% акрил</span>
                                             <span class="c-product__price">790 ₽</span>
                                             <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                            <button class="icon icon_l c-product__favorite">
-                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </button>
                                         </div>
@@ -187,9 +194,10 @@
                                             <span class="c-product__structure">70% шерсть, 30% акрил</span>
                                             <span class="c-product__price">790 ₽</span>
                                             <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                            <button class="icon icon_l c-product__favorite">
-                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </button>
                                         </div>
@@ -235,7 +243,9 @@
                     <div class="s-header is-light">
                         <div class="s-header__content">
                             <span class="s-header__label">Почему именно мы</span>
-                            <h2 class="s-header__title">Преимущества</h2>
+                            <div class="s-header__title-container">
+                                <h2 class="s-header__title">Преимущества</h2>
+                            </div>
                         </div>
                     </div>
                     <div class="grid-only-3 s-advant__body">
@@ -273,12 +283,15 @@
                 <div class="s-partners__container">
                     <div class="s-header">
                         <div class="s-header__content">
-                            <h2 class="s-header__title">Партнеры</h2>
+                            <div class="s-header__title-container">
+                                <h2 class="s-header__title">Партнеры</h2>
+                                <div class="s-cat__arrows">
+                                    <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-partners__arrow s-partners__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                    <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-partners__arrow s-partners__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                                </div>
+
+                            </div>
                             <p class="s-header__text">Компании, которые используют нашу продукцию  </p>
-                        </div>
-                        <div class="s-cat__arrows">
-                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-partners__arrow s-partners__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
-                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-partners__arrow s-partners__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
                         </div>
                     </div>
                     <div class="swiper-slider s-partners__body">
@@ -296,21 +309,23 @@
             <section class="section banner banner_consult">
                 <div class="banner__container">
                     <div class="banner__body" style="background-image: url('@img/banner/consultation.jpg');">
-                        <div class="b-consult__info">
+                        <div class="banner__info">
                             <div class="banner__content">
                                 <h2 class="banner__title">Консультация по товарам</h2>
                                 <p class="banner__text">Мы поможем вам и ответим на все вопросы!</p>
                             </div>
-                            <form action="#" class="banner__form">
-                                <label class="tf banner__form-tf">
-                                    <span class="tf__field">
-                                        <input type="text" name="tel-or-email">
-                                        <span class="tf__label">Ваш номер телефона или E-mail</span>
-                                    </sp>
-                                </label>
-                                <button class="btn is-fill banner__submit">Заказать звонок</button>
-                            </form>
-                            <span class="banner__agree">Нажимая на кнопку “Заказать звонок” я согласен но обработку персональных данных</span>
+                            <div class="banner__form-container">
+                                <form action="#" class="banner__form">
+                                    <label class="tf banner__form-tf">
+                                        <span class="tf__field">
+                                            <input type="text" name="tel-or-email">
+                                            <span class="tf__label">Ваш номер телефона или E-mail</span>
+                                        </sp>
+                                    </label>
+                                    <button class="btn is-fill banner__submit">Заказать звонок</button>
+                                </form>
+                                <span class="banner__agree">Нажимая на кнопку “Заказать звонок” я согласен но обработку персональных данных</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,15 +334,17 @@
                 <div class="s-news__container">
                     <div class="s-header">
                         <div class="s-header__content">
-                            <h2 class="s-header__title">Наш блог</h2>
-                        </div>
-                        <div class="s-header__more">
-                            <a href="#" class="link-arrow">
-                                Весь каталог
-                                <span class="link-arrow__icon">
-                                    <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
-                                </span>
-                            </a>
+                            <div class="s-header__title-container">
+                                <h2 class="s-header__title">Наш блог</h2>
+                                <div class="s-header__more">
+                                    <a href="#" class="link-arrow">
+                                        Весь каталог
+                                        <span class="link-arrow__icon">
+                                            <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="grid-only-3 s-news__body">
