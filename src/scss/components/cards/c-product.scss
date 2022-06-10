@@ -48,6 +48,9 @@
     border-radius: $radius-l;
     box-shadow: $shadow-card;
     padding: 6px 32px 0;
+
+    @include resVal(padding-right, 16, 32, 450, 580);
+    @include resVal(padding-left, 16, 32, 450, 580);
 }
 
 .c-product__img {
@@ -71,7 +74,9 @@
     font-weight: 700;
     line-height: lhperc(20, 28);
 
-    @media (max-width: $tablet) {
+    @include resVal(font-size, 15, 18, 450, 580);
+
+    @media (max-width: $mobile-m) {
         font-size: 18px;
     }
 }
@@ -81,6 +86,8 @@
     color: $text-primary-4;
     line-height: lhperc(12, 20);
     margin: 6px 0 14px;
+    
+    @include resVal(font-size, 12, 14, 450, 580);
 }
 
 .c-product__price {

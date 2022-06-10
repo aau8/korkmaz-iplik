@@ -96,13 +96,13 @@ const sectionBestSlider = new Swiper(".products-slider", {
             slidesPerView: 3,
             spaceBetween: 24,
         },
-        550: {
+        450: {
             slidesPerView: 2,
             spaceBetween: 24,
             allowTouchMove: true,
         },
         0: {
-            slidesPerView: 1.6,
+            slidesPerView: 1,
             spaceBetween: 16,
             allowTouchMove: true,
         }

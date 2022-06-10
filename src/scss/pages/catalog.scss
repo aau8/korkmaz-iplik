@@ -87,16 +87,16 @@
     & .c-product {
 
         & .c-product__wrap {
-            @include resVal(padding-right, 16, 32, 450, 580);
-            @include resVal(padding-left, 16, 32, 450, 580);
+            // @include resVal(padding-right, 16, 32, 450, 580);
+            // @include resVal(padding-left, 16, 32, 450, 580);
         }
 
         & .c-product__title {
-            @include resVal(font-size, 15, 18, 450, 580);
+            // @include resVal(font-size, 15, 18, 450, 580);
         }
 
         & .c-product__structure {
-            @include resVal(font-size, 12, 14, 450, 580);
+            // @include resVal(font-size, 12, 14, 450, 580);
         }
     }
 }

@@ -1,0 +1,43 @@
+// Компоненты страницы
+.p-main {
+    position: relative;
+}
+
+.p-main_pb {
+    padding-bottom: 110px;
+    
+    @media (max-width: $laptop) {
+        padding-bottom: 80px;
+    }
+    
+    @media (max-width: $tablet) {
+        padding-bottom: 60px;
+    }
+}
+
+// Шапка страницы
+.p-header {
+    margin-bottom: 40px;
+
+    & .s-header {
+        margin-bottom: 0;
+
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.p-header__container {
+
+}
+
+.p-header__body {
+
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+}
+
+//========================================================================================================================================================

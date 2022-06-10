@@ -2,7 +2,15 @@
     margin: 32px 0 12px;
     overflow-x: auto;
 
-    @include scrollbar(100%, 4px)
+    @include scrollbar(100%, 4px);
+
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-top: 16px;
+    }
 }
 
 .breadcrumbs__list {

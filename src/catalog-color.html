@@ -10,21 +10,22 @@
 <body>
 	<div class="wrapper">
         @@include('html/header.html',{})
-        <main class="section_light catalog-color-main">
-            <div class="breadcrumbs">
-                <div class="breadcrumbs__container">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
-                        <li class="breadcrumbs__item"><a class="link" href="#">Пряжа</a></li>
-                        <li class="breadcrumbs__item">Вискоза-Акрил 20/2</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="catalog-color-main__container">
-                <div class="s-header">
-                    <div class="s-header__content">
-                        <div class="s-header__title-container">
-                            <h2 class="s-header__title">Пряжа Вискоза-Акрил 20/2 </h2>
+        <main class="section_bg-main p-main">
+            <div class="p-main__container">
+                <div class="p-header">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item"><a class="link" href="#">Пряжа</a></li>
+                            <li class="breadcrumbs__item">Вискоза-Акрил 20/2</li>
+                        </ul>
+                    </div>
+                    <div class="p-header__body">
+                        <div class="s-header">
+                            <div class="s-header__content">
+                                <h2 class="s-header__title">Пряжа Вискоза-Акрил 20/2 </h2>
+                                <p class="s-header__text">Вес бобины: 1700 граммов. Состав: 100% акрил. Цена указана за 1 кг</p>
+                            </div>
                             <div class="s-header__more">
                                 <a href="#" class="link-arrow is-reverse has-light-icon">
                                     Назад
@@ -34,78 +35,87 @@
                                 </a>
                             </div>
                         </div>
-                        <p class="s-header__text">Вес бобины: 1700 граммов. Состав: 100% акрил. Цена указана за 1 кг</p>
-                        <h3 class="s-header__subtitle">Новые цвета</h3>
                     </div>
                 </div>
-                <div class="catalog-color-main__body">
-                    <div class="swiper-slider products-slider s-best__slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="c-product is-new has-add-favorite">
-                                    <div class="c-product__wrap">
-                                        <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
-                                        <span class="c-product__title">Вискоза-Акрил 20/2</span>
-                                        <span class="c-product__structure">70% шерсть, 30% акрил</span>
-                                        <span class="c-product__price">790 ₽</span>
-                                        <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                        <button class="icon icon_l c-product__favorite" data-add-favorite>
-                                            <svg fill="none" viewBox="0 0 32 32">
-                                                <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
-                                                <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </button>
+                <div class="p-main__body">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h3 class="s-header__subtitle">Новые цвета</h3>
+                        </div>
+                        <div class="s-cat__arrows arrows-slider_fixed">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-best__arrow s-best__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-best__arrow s-best__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="catalog-color-main__body">
+                        <div class="swiper-slider products-slider s-best__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="c-product is-new has-add-favorite">
-                                    <div class="c-product__wrap">
-                                        <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
-                                        <span class="c-product__title">Вискоза-Акрил 20/2</span>
-                                        <span class="c-product__structure">70% шерсть, 30% акрил</span>
-                                        <span class="c-product__price">790 ₽</span>
-                                        <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                        <button class="icon icon_l c-product__favorite" data-add-favorite>
-                                            <svg fill="none" viewBox="0 0 32 32">
-                                                <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
-                                                <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </button>
+                                <div class="swiper-slide">
+                                    <div class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="c-product is-new has-add-favorite">
-                                    <div class="c-product__wrap">
-                                        <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
-                                        <span class="c-product__title">Вискоза-Акрил 20/2</span>
-                                        <span class="c-product__structure">70% шерсть, 30% акрил</span>
-                                        <span class="c-product__price">790 ₽</span>
-                                        <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                        <button class="icon icon_l c-product__favorite" data-add-favorite>
-                                            <svg fill="none" viewBox="0 0 32 32">
-                                                <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
-                                                <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </button>
+                                <div class="swiper-slide">
+                                    <div class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="c-product is-new has-add-favorite">
-                                    <div class="c-product__wrap">
-                                        <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
-                                        <span class="c-product__title">Вискоза-Акрил 20/2</span>
-                                        <span class="c-product__structure">70% шерсть, 30% акрил</span>
-                                        <span class="c-product__price">790 ₽</span>
-                                        <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
-                                        <button class="icon icon_l c-product__favorite" data-add-favorite>
-                                            <svg fill="none" viewBox="0 0 32 32">
-                                                <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
-                                                <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </button>
+                                <div class="swiper-slide">
+                                    <div class="c-product is-new has-add-favorite">
+                                        <div class="c-product__wrap">
+                                            <div class="c-product__img"><img src="@img/products/1.jpg" alt=""></div>
+                                            <span class="c-product__title">Вискоза-Акрил 20/2</span>
+                                            <span class="c-product__structure">70% шерсть, 30% акрил</span>
+                                            <span class="c-product__price">790 ₽</span>
+                                            <button class="btn is-fill has-icon-cart c-product__order">Заказать</button>
+                                            <button class="icon icon_l c-product__favorite" data-add-favorite>
+                                                <svg fill="none" viewBox="0 0 32 32">
+                                                    <path class="favorite-stroke" fill="#2C2D2E" d="m16 9-1.25-1.2C11.8 5 6.4 5.24 4.45 8.77c-.91 1.67-1.12 4.07.55 7.13 1.61 2.95 4.96 6.48 11 10.33 6.04-3.85 9.39-7.38 11-10.33 1.67-3.07 1.47-5.46.55-7.13C25.6 5.24 20.2 5 17.25 7.8L16 9Zm0 19.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z"/>
+                                                    <path class="favorite-fill" fill="#FDAC19" fill-rule="evenodd" d="M16 28.19c-26.83-16.47-8.5-30-.3-21.8l.3.28c.1-.1.68-.58.78-.67 7.96-6.8 26.05 5.72-.78 22.19Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +419,7 @@
             </div>
             <section class="section banner banner_consult">
                 <div class="banner__container">
-                    <div class="banner__body" style="background-image: url('@img/banner/consultation.jpg');">
+                    <div class="banner__body" style="background-image: url('@img/banner/1.jpg');">
                         <div class="b-consult__info">
                             <div class="banner__content">
                                 <h2 class="banner__title">Консультация по товарам</h2>

@@ -1,0 +1,154 @@
+.text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: lhperc(14, 28);
+
+    & h2 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: lhperc(18, 28);
+    }
+
+    & p {
+        margin: 24px 0;
+    }
+
+    & ul,
+    & ol {
+        margin: 30px 0;
+    }
+
+    & ol {
+        counter-reset: olCounter;
+        list-style: none;
+
+        & li {
+            --size-icon: 44px;
+            line-height: 1.6;
+            display: flex;
+
+            & span {
+                margin: auto 0;
+            }
+            
+            &::before {
+                content: counter(olCounter);
+                counter-increment: olCounter;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: var(--size-icon);
+                width: var(--size-icon);
+                height: var(--size-icon);
+                font-size: 12px;
+                font-weight: 700;
+                border-radius: 50%;
+                background: $frame-main;
+                text-align: center;
+                margin-right: 20px;
+
+                @media (max-width: $mobile-l) {
+                    --size-icon: 36px;
+                    margin-right: 12px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    & strong,
+    & b {
+        font-weight: 500;
+    }
+
+    & > * {
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Блок "Alert"
+.b-alert {
+    display: flex;
+    margin: 40px 0;
+}
+
+.b-alert__icon {
+    --size-icon: 58px;
+    min-width: var(--size-icon);
+    width: var(--size-icon);
+    height: var(--size-icon);
+    display: flex;
+    margin-right: 28px;
+
+    @media (max-width: $tablet) {
+        --size-icon: 48px;
+        margin-right: 20px;
+    }
+
+    @media (max-width: $mobile-l) {
+        --size-icon: 36px;
+        margin-right: 12px;
+    }
+}
+
+.b-alert__text {
+    color: $text-primary-6;
+    line-height: 1.6;
+    margin: auto 0;
+}
+
+// Блок "Map"
+.b-map {
+    width: 100%;
+    height: 232px;
+    background: $frame-light;
+    border-radius: $radius-l;
+    box-shadow: 0px 14px 50px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    margin: 55px 0;
+
+    & iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Блок "Info"
+.b-info {
+    display: flex;
+    padding: 50px;
+    border-radius: $radius-l;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+
+    @media (max-width: $tablet) {
+        padding: 30px;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding: 24px 16px;
+    }
+}
+
+.b-info__icon {
+    --size-icon: 24px;
+    min-width: var(--size-icon);
+    width: var(--size-icon);
+    height: var(--size-icon);
+
+    @media (max-width: $mobile-l) {
+        --size-icon: 20px;
+    }
+}
+
+.b-info__text {
+    line-height: 1.6;
+    margin: auto 0 auto 12px;
+}

@@ -1,0 +1,42 @@
+.deliv {
+    margin-bottom: 100px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 60px;
+    }
+}
+
+.deliv__container {
+
+    & > * {
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.deliv__types {
+
+    & .deliv__type {
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+}
+
+.deliv__type {
+    color: $text-primary-6;
+    line-height: 1.6;
+
+    & span {
+        color: $text-primary;
+        margin-right: 10px;
+    }
+}
+
