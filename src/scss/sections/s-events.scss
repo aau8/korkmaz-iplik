@@ -1,0 +1,39 @@
+.s-event__slider {
+	padding: 20px;
+	margin: -20px;
+}
+
+.s-events__year-list {
+	margin-top: 16px;
+
+	& > .s-events__year {
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
+
+.s-events__year {
+	position: relative;
+	font-size: 14px;
+	color: $text-primary-6;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: $text-primary-6;
+		opacity: 0;
+	}
+
+	&.is-active {
+
+		&::before {
+			opacity: 1;
+		}
+	}
+}

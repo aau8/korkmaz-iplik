@@ -8,7 +8,7 @@ import { bodyLock, bodyUnlock, bodyLockToggle, removeAllClasses, getSiblings } f
 // data-acc-id="<acc-id>" - указывать у аккордеона, если планируется использовать data-acc-open. А так, необязательно
 export function acc() {
     window.addEventListener("click", accDo)
-    
+
     function accDo(e) {
         const dataAccOpen = e.target.getAttribute('data-acc-open')
 
@@ -17,29 +17,29 @@ export function acc() {
             const accContainer = !accToggle.closest("[data-acc-body]") ? accToggle.parentElement.parentElement : accToggle.closest("[data-acc-body]")
             const accElem = accToggle.parentElement
             const accBody = accToggle.nextElementSibling
-        
+
             if (accBody.style.maxHeight) {
                 accBody.style.maxHeight = null
                 accElem.classList.remove("is-show")
             } else {
                 const adjacentElems = getSiblings(accElem)
                 const accHiddenSibling = accContainer.dataset.accHiddenSibling
-    
+
                 accElem.classList.add("is-show")
-    
+
                 if (accHiddenSibling != undefined && accHiddenSibling != 'false') {
-    
+
                     for (let i = 0; i < adjacentElems.length; i++) {
                         const elem = adjacentElems[i]
                         const elemHeader = elem.querySelector("[data-acc-toggle]")
                         const elemBody = elem.querySelector("[data-acc-body]")
-    
+
                         elem.classList.remove("is-show")
                         elemHeader.classList.remove("is-show")
                         elemBody.style.maxHeight = null
                     }
                 }
-    
+
                 accBody.style.maxHeight = accBody.scrollHeight + "px"
                 accContainer.style.maxHeight = parseInt(accContainer.scrollHeight) + accBody.scrollHeight + "px"
             }
@@ -50,14 +50,14 @@ export function acc() {
 
 
 /**
- * Модальное окно 
- * 
+ * Модальное окно
+ *
  * INFO: Атрибуты (все атрибуты находятся в св-ве attrs)
  * data-modal-id="<id-modal>" - (modalId) каждая модалка имеет этот атрибут, в котором мы указываем ее id
  * data-close-on-bg - (modalCloseOnBg) модалка, которая должна закрываться при клике по ее фону, должна иметь этот атрибут
  * data-modal-open="<id-modal>" - (btnModalOpen) имеет элемент, при нажатии на который открывается модалка
  * data-modal-close="<id-modal || Null>" - (btnModalClose) имеет элемент, при нажатии на который, модальное окно закрывается. Если елемент находится внутри модалки, которую он должен закрыть, в значении атрибута указывать id модалки необязательно (можно оставить его пустым). Значение стоит указывать, если элемент, который должен закрыть модалку, находится вне контейнера с атрибутом data-modal-id
- * 
+ *
  * INFO: Свойства
  * attrs - (Object) названия атрибутов
  * classNames - (Object) названия классов
@@ -70,22 +70,22 @@ export function acc() {
  * useHash - (Boolean) использовать хеш. Если в url указан хеш равный id модалки, модалка откроется. По умолчанию - true
  * historyHash - (Boolean) сохранять хеш в истории браузера. Если useHash === false, то historyHash будет равен false. По умолчанию - false
  * hash - (String) значение хеша
- * 
+ *
  * INFO: Функции
  * open(<String || Element>) - метод, открывающий модалку
  * close(<String || Element || Null>) - метод, закрывающий модалку. Если скобки оставить пустыми, закроется открытая модалка
  * update() - метод, обновляющий список модалок (this.modalList) и список кнопок (this.openingBtnList)
  * updateModalList() - метод, обновляющий список модалок (this.modalList)
  * updateOpeningBtnList() - метод, обновляющий список кнопок (this.openingBtnList)
- * 
- * 
+ *
+ *
  * TODO: Атрибуты data-modal-hash и data-modal-hash-history. В случае если this.useHash === false:
  * data-modal-hash - указывается у модалки, которая должна открываться по хешу
  * data-modal-hash-history - указывается у модалки, которая должна быть сохранена в истории ( использовать вместе с первым атрибутом )
  */
  export class Modals {
     attrs = {
-        modalId: 'data-modal-id',
+        modalId: 'data-new-modal-id',
         modalCloseOnBg: 'data-close-on-bg',
         btnModalOpen: 'data-modal-open',
         btnModalClose: 'data-modal-close',
@@ -103,7 +103,7 @@ export function acc() {
     useHash = true
     historyHash = !this.useHash ? false : false
     hash = null
-    
+
     constructor(options) {
         this.init()
     }
@@ -117,7 +117,7 @@ export function acc() {
     }
 
     // Открыть модальное окно
-    open(modal) {        
+    open(modal) {
         if (typeof modal === 'string') {
             modal = document.querySelector(`[${this.attrs.modalId}=${modal}]`)
         }
@@ -125,7 +125,7 @@ export function acc() {
         this.modalIsShow = true
         this.modalShow = modal
         this.modalShowId = modal.dataset.modalId
-        
+
         this.modalBgClose()
         modal.classList.add(this.classNames.modalShow)
         bodyLock()
@@ -148,21 +148,21 @@ export function acc() {
         if (this.modalShow.dataset.closeOnBg != undefined) {
             this._modalBg.removeEventListener('click', this._bgEvent)
         }
-        
+
         this.modalIsShow = false
         this.modalShow = null
         this.modalShowId = null
-        
+
         modal.classList.remove(this.classNames.modalShow)
         bodyUnlock()
     }
-    
+
     // Открыть модалку при клике по кнопке c атрибутом this.attrs.btnModalOpen
     btnOpen() {
         document.addEventListener('click', e => {
             if (e.target.dataset.modalOpen != undefined || e.target.closest(`[${this.attrs.btnModalOpen}]`)) {
                 const btnOpenModal = e.target.dataset.modalOpen != undefined ? e.target : e.target.closest(`[${this.attrs.btnModalOpen}]`)
-    
+
                 this.open(btnOpenModal.dataset.modalOpen)
                 if (this.useHash) this.setHash()
             }
@@ -211,12 +211,12 @@ export function acc() {
             })
         }
     }
-    
+
     // Проверка хеша
     checkHash() {
         const hash = window.location.hash.replace('#', '')
         this.hash = (hash === '') ? null : hash
-    
+
         if (hash != '') {
             this.open(hash)
         }
@@ -267,7 +267,7 @@ export function tabs() {
         const tab = tabElems[i];
         const btnElems = tab.querySelectorAll('[data-tab-btn]')
         const allCards = tab.querySelectorAll('[data-tab-card]')
-    
+
         for (let i = 0; i < btnElems.length; i++) {
             const btn = btnElems[i];
 
@@ -284,14 +284,14 @@ export function tabs() {
                 if (btnData === 'all') {
                     for (let i = 0; i < allCards.length; i++) {
                         const card = allCards[i];
-                        
+
                         card.classList.add('is-show')
                     }
                 }
                 else {
                     for (let i = 0; i < cardElems.length; i++) {
                         const card = cardElems[i];
-                        
+
                         card.classList.add('is-show')
                     }
                 }
@@ -331,7 +331,7 @@ export function labelTextfield(container = document) {
         input.addEventListener('focus', e => {
             textfield.classList.add('has-change-label')
         })
-        
+
         input.addEventListener('blur', e => {
             if (input.value === '') {
                 textfield.classList.remove('has-change-label')
@@ -364,7 +364,7 @@ export function select() {
 
         // Если пользователь кликнул вне зоны селекта
         if (!target.classList.contains('select') && !target.closest('.select.is-open')) {
-            
+
             if (document.querySelector('.select.is-open')) {
                 document.querySelector('.select.is-open').classList.remove('is-open')
             }
@@ -407,13 +407,13 @@ export function arrowUp() {
 // Фиксация элемента с position: fixed над подвалом (чтобы не загораживал контент в подвале)
 export function fixElemOverFooter(elem) {
     const footer = document.querySelector('footer')
-    
+
     window.addEventListener('scroll', fixElem)
-    
+
     fixElem()
     function fixElem() {
         const footerPageY = footer.getBoundingClientRect().top
-        
+
         if (footerPageY - window.innerHeight < 0) {
             if (!elem.classList.contains('is-fixed')) {
                 elem.style.position = 'absolute'
@@ -435,7 +435,7 @@ export function onlyDigit() {
 
     for (let i = 0; i < inputDigitElems.length; i++) {
         const input = inputDigitElems[i];
-        
+
         input.addEventListener('keydown', e => {
             if (e.key.search(/[\d\.]/)) {
                 e.preventDefault()

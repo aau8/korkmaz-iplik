@@ -29,6 +29,7 @@ $border-line: #999999;
 $input-placeholder: #808182;
 
 // Радиусы
+$radius-s: 8px;
 $radius-m: 14px;
 $radius-l: 20px;
 
@@ -78,7 +79,7 @@ body {
 }
 
 /*
-(i) Стили будут применяться ко 
+(i) Стили будут применяться ко
 всем классам содержащим *__container
 Например header__container, main__container и т.д.
 */
@@ -120,6 +121,7 @@ body {
 @import "./components/cards/c-product";
 @import "./components/cards/c-advant";
 @import "./components/cards/c-post";
+@import "./components/cards/c-event";
 
 // Стили частоиспользуемых секций
 @import "./sections/header";
@@ -131,6 +133,7 @@ body {
 @import "./sections/footer";
 
 @import "./sections/sidebar";
+@import "./sections/s-events";
 
 
 // Стили для отдельных страниц
@@ -139,3 +142,6 @@ body {
 @import "./pages/deliv";
 @import "./pages/contacts";
 @import "./pages/pnf";
+@import "./pages/about";
+@import "./pages/production";
+@import "./pages/support";

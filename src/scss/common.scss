@@ -66,7 +66,7 @@
     }
 }
 
-// Бургер 
+// Бургер
 .burger {
     position: relative;
     width: 40px;
@@ -103,11 +103,11 @@
             &:nth-child(1) {
                 transform: translate(-50%, -50%) rotate(45deg);
             }
-    
+
             &:nth-child(2) {
                 width: 0;
             }
-    
+
             &:nth-child(3) {
                 transform: translate(-50%, -50%) rotate(-45deg);
             }
@@ -119,6 +119,7 @@
 
 // Раздел
 .section {
+	position: relative;
     margin: 100px 0;
 
     @media (max-width: $tablet) {
@@ -227,6 +228,7 @@
 }
 
 .s-header__text {
+	max-width: 700px;
     font-size: 15px;
     color: $text-primary-6;
     line-height: lhperc(15, 20);
@@ -253,21 +255,26 @@
         object-fit: cover;
     }
 
-    @media (max-width: $laptop) {
-        min-width: 1440px;
-    }
+    // @media (max-width: $laptop) {
+    //     min-width: 1440px;
+    // }
 
-    @media (max-width: $tablet) {
-        min-width: $tablet;
-    }
+    // @media (max-width: $tablet) {
+    //     min-width: $tablet;
+    // }
 }
 
-.s-decor-up {
+.s-decor_up {
     top: 0;
 }
 
-.s-decor-down {
+.s-decor_down {
     bottom: 0;
+}
+
+.s-decor_center {
+    top: 50%;
+	transform: translate(-50%, -50%);
 }
 //========================================================================================================================================================
 
@@ -328,9 +335,9 @@
     }
 
     @media (any-hover: hover) {
-        
+
         &:hover {
-            
+
             & svg {
                 fill: $accent-second;
             }
@@ -341,3 +348,5 @@
         }
     }
 }
+
+//

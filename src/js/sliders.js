@@ -15,7 +15,7 @@ const mainSlider = new Swiper(".main-slider__container", {
             allowTouchMove: true,
         }
     },
-    
+
     effect: 'fade',
     fadeEffect: {
       crossFade: true
@@ -24,7 +24,7 @@ const mainSlider = new Swiper(".main-slider__container", {
     pagination: {
         el: ".main-slider__pagination",
         type: "fraction",
-        renderFraction: (currentClass, totalClass) => `<span class="${currentClass} main-slider__pagination-elem main-slider__pagination-current"></span><span class="main-slider__pagination-separator"></span><span class="${totalClass} main-slider__pagination-elem main-slider__pagination-total"></span>`
+        renderFraction: mainPagin,
     },
 
     navigation: {
@@ -33,9 +33,13 @@ const mainSlider = new Swiper(".main-slider__container", {
     },
 });
 
+function mainPagin(currentClass, totalClass) {
+	return `<span class="${currentClass} slider__pagination-elem slider__pagination-current"></span><span class="slider__pagination-separator"></span><span class="${totalClass} slider__pagination-elem slider__pagination-total"></span>`
+}
+
 const sectionCategoriesSlider = new Swiper(".s-cat__body", {
     modules: [ Navigation ],
-    
+
     allowTouchMove: false,
 
     breakpoints: {
@@ -74,7 +78,7 @@ const sectionCategoriesSlider = new Swiper(".s-cat__body", {
     },
 });
 
-const sectionBestSlider = new Swiper(".products-slider", {
+const sectionBestSlider = new Swiper(".s-best__slider", {
     modules: [ Navigation ],
 
     allowTouchMove: false,
@@ -114,9 +118,70 @@ const sectionBestSlider = new Swiper(".products-slider", {
     },
 });
 
+const sectionEventSlider = new Swiper(".s-event__slider", {
+    modules: [ Navigation ],
+
+    allowTouchMove: false,
+
+    breakpoints: {
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 86,
+        },
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+        920: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+        650: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            allowTouchMove: true,
+        },
+        450: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            allowTouchMove: true,
+        },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            allowTouchMove: true,
+        }
+    },
+
+    navigation: {
+        nextEl: ".s-events__arrow_next",
+        prevEl: ".s-events__arrow_prev",
+    },
+});
+
+const cardEventSlider = new Swiper(".c-event__slider", {
+    modules: [ Navigation, Pagination ],
+
+	slidesPerView: 1,
+    allowTouchMove: false,
+
+	pagination: {
+        el: ".c-event__pagination",
+        type: "fraction",
+        renderFraction: mainPagin,
+    },
+
+    navigation: {
+        nextEl: ".c-event__slider-arrow_next",
+        prevEl: ".c-event__slider-arrow_prev",
+    },
+});
+
+// console.log(cardEventSlider.navigation.nextEl)
+
 const sectionPartnersSlider = new Swiper(".s-partners__body", {
     modules: [ Navigation ],
-    
+
     allowTouchMove: false,
 
     breakpoints: {

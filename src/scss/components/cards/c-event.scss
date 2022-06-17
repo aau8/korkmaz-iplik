@@ -1,0 +1,58 @@
+.c-event__slider {
+	// border-radius: $radius-s;
+	overflow: hidden;
+}
+
+.c-event__slide {
+	border-radius: $radius-s;
+	overflow: hidden;
+}
+
+.c-event__content {
+	background: $light;
+	border-radius: $radius-l;
+	box-shadow: $shadow-card;
+	padding: 34px 36px;
+	margin-top: 28px;
+
+	@media (max-width: $tablet) {
+		margin-top: 16px;
+	}
+}
+
+.c-event__title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: lhperc(20, 28);
+}
+
+.c-event__text {
+	line-height: 1.4;
+	margin-top: 14px;
+}
+
+// Стрелки с пагинацией
+.c-event__slider-tools {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 28px;
+
+	@media (max-width: $tablet) {
+		margin-top: 16px;
+	}
+}
+
+.c-event__slider-arrow {
+	width: 16px;
+	height: 16px;
+}
+
+.c-event__slider-arrow_prev {
+
+}
+
+.c-event__pagination {
+	width: auto;
+	margin: 0 35px;
+}

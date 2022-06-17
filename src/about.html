@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="p-main section_bg-main about-main">
+            <div class="p-main__container">
+                <div class="p-header">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item">О нас</li>
+                        </ul>
+                    </div>
+                    <div class="p-header__body">
+                        <div class="s-header">
+                            <div class="s-header__content">
+                                <h2 class="s-header__title">О компании</h2>
+                            </div>
+                        </div>
+						<div class="about-main__body">
+							<div class="about-tabs">
+								<button class="about-tabs__btn link is-active">О компании</button>
+								<button class="about-tabs__btn link">Производство</button>
+								<button class="about-tabs__btn link">Помощь и поддержка</button>
+							</div>
+							<div class="about-main__content">
+								<h1 class="about-main__title">korkmaziplik</h1>
+								<p class="about-main__text">
+									Компания “Коркмаз иплик” уже больше <b>12 лет</b> занимает одну из ведущих позиций среди поставщиков лучших сортов турецкой пряжи из  натуральных, искусственных и смешанных волокон для трикотажного производства. Мы работаем с такими фабриками как: <b>Esra, Sireci, Riteks, Akal, Akren и Midas</b>,  продукция которых уже давно заслужено завоевала авторитет среди отечественных производителей трикотажа.
+									<br><br>
+									Относительно более детальной информации обращайтесь по указанным телефонам, будем рады сотрудничеству с Вами!!!
+								</p>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-decor_down">
+				<svg fill="none" viewBox="0 0 1920 189">
+					<path fill="#fff" d="M1920 0c-170.5 99-455.5 166-989.5 99S109 105.5 0 163v26h1920V0Z"/>
+					<path stroke="#2C2D2E" stroke-opacity=".3" d="M-29 203S248 37.5 684 95s593 91.5 903.5 50.5 340.5-127 340.5-127"/>
+				</svg>
+            </div>
+        </main>
+		<div class="content">
+            <section class="section s-advant about__s-advant">
+                <div class="s-advant__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <span class="s-header__label">Почему именно мы</span>
+                            <h2 class="s-header__title">Преимущества</h2>
+                        </div>
+                    </div>
+                    <div class="grid-only-3 s-advant__body">
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/1.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/yarn.svg" alt=""></div>
+                                    <p class="c-advant__text">Мы доставляем пряжу из Турции по всему миру</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/2.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/paper.svg" alt=""></div>
+                                    <p class="c-advant__text">Мы гарантируем качество нашей пряжи</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-advant">
+                            <div class="c-advant__wrap">
+                                <div class="c-advant__img"><img src="@img/advantages/3.jpg" alt=""></div>
+                                <div class="c-advant__content">
+                                    <div class="c-advant__icon"><img src="@img/icons/tag.svg" alt=""></div>
+                                    <p class="c-advant__text">Самая приятная цена Турецкой пряжи на российском рынке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="s-decor about__s-advant-decor">
+					<svg fill="none" viewBox="0 0 1920 437">
+						<path fill="#CACACA" fill-opacity=".1" d="M0 163.57S108.5-99.07 782 42.43s1138-33 1138-33v110.43c-159 222.5-534.5 354.07-920 278.57S331 279.36 0 436.86v-273.3Z"/>
+					</svg>
+				</div>
+            </section>
+            <section class="section s-partners">
+                <div class="s-partners__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Партнеры</h2>
+                            <p class="s-header__text">Компании, которые используют нашу продукцию  </p>
+                        </div>
+                        <div class="arrows-slider">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-partners__arrow s-partners__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-partners__arrow s-partners__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="swiper-slider s-partners__body">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="@img/partners/1.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/3.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/5.png" alt=""></div>
+                            <div class="swiper-slide"><img src="@img/partners/5.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section banner banner_consult">
+                <div class="banner__container">
+                    <div class="banner__body" style="background-image: url('@img/banner/1.jpg');">
+                        <div class="banner__info">
+                            <div class="banner__content">
+                                <h2 class="banner__title">Консультация по товарам</h2>
+                                <p class="banner__text">Мы поможем вам и ответим на все вопросы!</p>
+                            </div>
+                            <div class="banner__form-container">
+                                <form action="#" class="banner__form">
+                                    <label class="tf banner__form-tf">
+                                        <span class="tf__field">
+                                            <input type="text" name="tel-or-email">
+                                            <span class="tf__label">Ваш номер телефона или E-mail</span>
+                                        </sp>
+                                    </label>
+                                    <button class="btn is-fill banner__submit">Заказать звонок</button>
+                                </form>
+                                <span class="banner__agree">Нажимая на кнопку “Заказать звонок” я согласен но обработку персональных данных</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			<section class="section s-events">
+				<div class="s-events__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Мероприятия</h2>
+							<p class="s-header__text">Компания “Коркмаз Иплик” находится на рынке Российской Федерации уже более восьми лет, за это время мы приняли участие во множестве различных конференций, семинаров, выставок и приобрели здесь много друзей.</p>
+							<div class="s-events__year-list">
+								<button class="s-events__year is-active">2014</button>
+								<button class="s-events__year">2015</button>
+								<button class="s-events__year">2016</button>
+							</div>
+						</div>
+                        <div class="arrows-slider arrows-slider_fixed">
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-events__arrow s-events__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                            <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-events__arrow s-events__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
+                        </div>
+                    </div>
+					<div class="s-events__body">
+						<div class="swiper-slider s-event__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="c-event">
+										<div class="swiper-slider c-event__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/1.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/2.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/3.jpg" alt=""></div>
+											</div>
+											<div class="c-event__slider-tools">
+												<button class="c-event__slider-arrow c-event__slider-arrow_prev swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="m11.53 15.66.27-.33-5.45-6.67L11.8 2l-.27-.33-5.73 7 5.73 7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M11.13 15.86a.6.6 0 0 1-.47-.22l-5.72-7a.6.6 0 0 1 0-.76l5.72-7a.6.6 0 0 1 .93 0l.27.33a.6.6 0 0 1 0 .76l-5.14 6.3 5.14 6.28a.6.6 0 0 1 0 .76l-.27.33a.6.6 0 0 1-.46.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+												<div class="slider-pagination is-horizontal c-event__pagination"></div>
+												<button class="c-event__slider-arrow c-event__slider-arrow_next swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="M5.27.86 5 1.19l5.45 6.67L5 14.53l.27.33 5.73-7-5.73-7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M5.67.66a.6.6 0 0 1 .47.22l5.73 7a.6.6 0 0 1 0 .76l-5.73 7a.6.6 0 0 1-.93 0l-.27-.33a.6.6 0 0 1 0-.76l5.14-6.29-5.14-6.29a.6.6 0 0 1 0-.76L5.2.88a.6.6 0 0 1 .46-.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="c-event__content">
+											<span class="c-event__title">42 Федеральная оптовая Ярмарка Текстильлегпром 2014 год</span>
+											<p class="c-event__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="c-event">
+										<div class="swiper-slider c-event__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/1.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/2.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/3.jpg" alt=""></div>
+											</div>
+											<div class="c-event__slider-tools">
+												<button class="c-event__slider-arrow c-event__slider-arrow_prev swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="m11.53 15.66.27-.33-5.45-6.67L11.8 2l-.27-.33-5.73 7 5.73 7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M11.13 15.86a.6.6 0 0 1-.47-.22l-5.72-7a.6.6 0 0 1 0-.76l5.72-7a.6.6 0 0 1 .93 0l.27.33a.6.6 0 0 1 0 .76l-5.14 6.3 5.14 6.28a.6.6 0 0 1 0 .76l-.27.33a.6.6 0 0 1-.46.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+												<div class="slider-pagination is-horizontal c-event__pagination"></div>
+												<button class="c-event__slider-arrow c-event__slider-arrow_next swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="M5.27.86 5 1.19l5.45 6.67L5 14.53l.27.33 5.73-7-5.73-7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M5.67.66a.6.6 0 0 1 .47.22l5.73 7a.6.6 0 0 1 0 .76l-5.73 7a.6.6 0 0 1-.93 0l-.27-.33a.6.6 0 0 1 0-.76l5.14-6.29-5.14-6.29a.6.6 0 0 1 0-.76L5.2.88a.6.6 0 0 1 .46-.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="c-event__content">
+											<span class="c-event__title">42 Федеральная оптовая Ярмарка Текстильлегпром 2014 год</span>
+											<p class="c-event__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="c-event">
+										<div class="swiper-slider c-event__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/1.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/2.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/3.jpg" alt=""></div>
+											</div>
+											<div class="c-event__slider-tools">
+												<button class="c-event__slider-arrow c-event__slider-arrow_prev swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="m11.53 15.66.27-.33-5.45-6.67L11.8 2l-.27-.33-5.73 7 5.73 7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M11.13 15.86a.6.6 0 0 1-.47-.22l-5.72-7a.6.6 0 0 1 0-.76l5.72-7a.6.6 0 0 1 .93 0l.27.33a.6.6 0 0 1 0 .76l-5.14 6.3 5.14 6.28a.6.6 0 0 1 0 .76l-.27.33a.6.6 0 0 1-.46.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+												<div class="slider-pagination is-horizontal c-event__pagination"></div>
+												<button class="c-event__slider-arrow c-event__slider-arrow_next swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="M5.27.86 5 1.19l5.45 6.67L5 14.53l.27.33 5.73-7-5.73-7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M5.67.66a.6.6 0 0 1 .47.22l5.73 7a.6.6 0 0 1 0 .76l-5.73 7a.6.6 0 0 1-.93 0l-.27-.33a.6.6 0 0 1 0-.76l5.14-6.29-5.14-6.29a.6.6 0 0 1 0-.76L5.2.88a.6.6 0 0 1 .46-.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="c-event__content">
+											<span class="c-event__title">42 Федеральная оптовая Ярмарка Текстильлегпром 2014 год</span>
+											<p class="c-event__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="c-event">
+										<div class="swiper-slider c-event__slider">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/1.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/2.jpg" alt=""></div>
+												<div class="swiper-slide c-event__slide"><img src="@img/advantages/3.jpg" alt=""></div>
+											</div>
+											<div class="c-event__slider-tools">
+												<button class="c-event__slider-arrow c-event__slider-arrow_prev swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="m11.53 15.66.27-.33-5.45-6.67L11.8 2l-.27-.33-5.73 7 5.73 7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M11.13 15.86a.6.6 0 0 1-.47-.22l-5.72-7a.6.6 0 0 1 0-.76l5.72-7a.6.6 0 0 1 .93 0l.27.33a.6.6 0 0 1 0 .76l-5.14 6.3 5.14 6.28a.6.6 0 0 1 0 .76l-.27.33a.6.6 0 0 1-.46.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+												<div class="slider-pagination is-horizontal c-event__pagination"></div>
+												<button class="c-event__slider-arrow c-event__slider-arrow_next swiper-button-disabled">
+													<svg fill="none" viewBox="0 0 17 17">
+														<path fill="#2C2D2E" d="M5.27.86 5 1.19l5.45 6.67L5 14.53l.27.33 5.73-7-5.73-7Z"/>
+														<path fill="#2C2D2E" fill-rule="evenodd" d="M5.67.66a.6.6 0 0 1 .47.22l5.73 7a.6.6 0 0 1 0 .76l-5.73 7a.6.6 0 0 1-.93 0l-.27-.33a.6.6 0 0 1 0-.76l5.14-6.29-5.14-6.29a.6.6 0 0 1 0-.76L5.2.88a.6.6 0 0 1 .46-.22Z" clip-rule="evenodd"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="c-event__content">
+											<span class="c-event__title">42 Федеральная оптовая Ярмарка Текстильлегпром 2014 год</span>
+											<p class="c-event__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="s-decor about__s-events-decor">
+					<svg fill="none" viewBox="0 0 1920 454">
+						<path fill="#CACACA" fill-opacity=".1" d="M0 138s103-248.14 685.5-77S1920 52.86 1920 52.86v110.43C1761 385.79 1331.5 451 960.5 387.5 589.5 324 163 305 0 453.5V138Z"/>
+						<path stroke="#2C2D2E" stroke-opacity=".3" d="M1920 112.68c-35.59 28.8-119.87 72.49-315.5 98.32-310.5 41-467.5 7-903.5-50.5C317.85 109.97 57.49 231.65 0 261.9"/>
+					</svg>
+				</div>
+			</section>
+            <section class="section s-news" id="categories">
+                <div class="s-news__container">
+                    <div class="s-header">
+                        <div class="s-header__content">
+                            <h2 class="s-header__title">Наш блог</h2>
+                        </div>
+                        <div class="s-header__more">
+                            <a href="#" class="link-arrow">
+                                Весь каталог
+                                <span class="link-arrow__icon">
+                                    <svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid-only-3 s-news__body">
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/1.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/2.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                        <a href="#" class="c-post">
+                            <div class="c-post__img"><img src="@img/blog/3.jpg" alt=""></div>
+                            <div class="c-post__content">
+                                <span class="c-post__label">Новая коллекция 2022</span>
+                                <span class="c-post__title">Уход за вязаными изделиями</span>
+                                <p class="c-post__text">Для стирки используйте специальные средства с&nbsp;ланолином (для&nbsp;шерсти), шампунь для домашних питомцев тоже подойдет..</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @@include('html/footer.html',{})
+	</div>
+
+    @@include('html/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

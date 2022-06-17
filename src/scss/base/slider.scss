@@ -18,8 +18,9 @@
     transition: opacity $tr;
 }
 
-.arrow-slider {
-
+.arrows-slider {
+    display: flex;
+    align-items: center;
 }
 
 // TODO: Фиксирование стрелок на больших экранах
@@ -87,16 +88,66 @@
     &:active {
         border-color: create-rgba($text-primary, .2);
     }
-    
+
     @media (any-hover: hover) {
-        
+
         &:hover {
             border-color: create-rgba($text-primary, .1);
         }
-        
+
         &:active {
             border-color: create-rgba($text-primary, .2);
             background: create-rgba($text-primary, .05);
         }
     }
+}
+
+// Пагинация
+.slider-pagination {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+	margin: 86px 0;
+
+	&.is-horizontal {
+		flex-direction: row;
+
+		& .slider__pagination-separator {
+			width: 50px;
+			height: 1px;
+			margin: 0 40px;
+		}
+	}
+
+    @media (max-width: 900px) {
+        margin: 50px 0;
+    }
+
+    @media (max-width: $tablet) {
+        flex-direction: row;
+        margin: 0 24px;
+    }
+}
+
+.slider__pagination-elem {
+    font-size: 16px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.slider__pagination-separator {
+    width: 1px;
+    height: 50px;
+    margin: 22px 0;
+    background: $text-primary-4;
+
+    @media (max-width: $tablet) {
+        width: 50px;
+        height: 1px;
+        margin: 0 16px;
+    }
+}
+
+.slider__pagination-total {
+    color: $text-primary-4
 }

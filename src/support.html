@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="p-main section_bg-main about-main">
+            <div class="p-main__container">
+                <div class="p-header">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item">О нас</li>
+                        </ul>
+                    </div>
+                    <div class="p-header__body">
+                        <div class="s-header">
+                            <div class="s-header__content">
+                                <h2 class="s-header__title">О компании</h2>
+                            </div>
+                        </div>
+						<div class="about-main__body">
+							<div class="about-tabs">
+								<button class="about-tabs__btn link">О компании</button>
+								<button class="about-tabs__btn link">Производство</button>
+								<button class="about-tabs__btn link is-active">Помощь и поддержка</button>
+							</div>
+							<div class="about-main__content text">
+								<h1 class="about-main__title">Помощь и поддержка</h1>
+								<p class="about-main__text">
+									Наша компания имеет очень <b>богатый опыт</b> работы в сфере продаж различных видов Турецкой пряжи в России, сотрудничала и продолжает сотрудничать со многими известными отечественными производителями трикотажа.
+									<br><br>
+									Однако, мы занимаемся не только поставками пряжи лучших фабрик-производителей Турции на рынок Российской Федерации, также мы можем <b>предоставить</b> Вам исчерпывающую <b>информацию</b> о том, почему мы работаем именно с данными видами пряжи и почему именно они наиболее востребованы в настоящее время.								</p>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-decor_down">
+				<svg fill="none" viewBox="0 0 1920 189">
+					<path fill="#fff" d="M1920 0c-170.5 99-455.5 166-989.5 99S109 105.5 0 163v26h1920V0Z"/>
+					<path stroke="#2C2D2E" stroke-opacity=".3" d="M-29 203S248 37.5 684 95s593 91.5 903.5 50.5 340.5-127 340.5-127"/>
+				</svg>
+            </div>
+        </main>
+		<div class="content">
+			<section class="section support">
+				<div class="support__container text">
+					<div class="b-wi">
+						<div class="b-wi__img"><img src="@img/blog/6.jpg" alt=""></div>
+						<div class="b-wi__content">
+							<h2>Консультация и помощь с подбором оборудованием</h2>
+							<ol>
+								<li><span>Если Вы только планируете или уже начинаете заниматься производством трикотажных изделий, мы с радостью предоставим Вам <b>консультационную информацию</b> в данной сфере, а также предложим по <b>заниженной цене</b> неликвидную пряжу, чтобы Вы смогли сделать отвязы и оценить качество изделий и их вязки.</span></li>
+								<li><span>Наши сотрудники имеют профессиональное образование и большой опыт работы на различных трикотажных предприятиях. Мы <b>поможем подобрать оборудование для производства</b>, подскажем где его можно приобрести по приемлемым ценам, новое и бывшее в употреблении, порекомендуем персонал для его обслуживания, программное обеспечение и магазины, где можно заказать запчасти.</span></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+        </div>
+
+        @@include('html/footer.html',{})
+	</div>
+
+    @@include('html/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

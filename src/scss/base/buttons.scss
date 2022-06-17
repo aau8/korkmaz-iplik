@@ -40,17 +40,17 @@
         color: $light;
         background: $accent;
         border: 1px solid transparent;
-    
+
         &:active {
             background: create-rgba($accent, .8);
         }
-    
+
         @media (any-hover: hover) {
-            
+
             &:hover {
                 @include btnLinear;
             }
-    
+
             &:active {
                 background: create-rgba($accent, .1);
             }
@@ -65,17 +65,17 @@
     // Кнопка с обводкой
     &.is-linear {
         @include btnLinear;
-    
+
         &:active {
             background: create-rgba($accent, .05);
         }
-    
+
         @media (any-hover: hover) {
-            
+
             &:hover {
                 background: create-rgba($accent, .05);
             }
-    
+
             &:active {
                 background: create-rgba($accent, .1);
             }
@@ -85,7 +85,7 @@
     // Кнопка с иконкой
     &.has-icon-cart {
         position: relative;
-    
+
         &::after {
             content: '';
             width: 16px;
@@ -95,16 +95,16 @@
             margin-left: 10px;
             transition: $tr;
         }
-    
+
         @media (any-hover: hover) {
-            
+
             &:hover {
-                
+
                 &::after {
                     background-color: $accent;
                 }
             }
-    
+
         }
     }
 }
@@ -130,11 +130,11 @@
     &:active {
         opacity: .6;
     }
-    
+
     @media (any-hover: hover) {
-        
+
         &:hover {
-            
+
             &::after {
                 animation: iconBounce $tr linear forwards;
             }
@@ -148,15 +148,30 @@
 .link {
     transition: $tr;
 
+	&::before,
+	&::after {
+		transition: $tr;
+	}
+
     @media (any-hover: hover) {
-        
+
         &:hover {
             color: $accent-second;
+
+			&::before,
+			&::after {
+				background: $accent-second;
+			}
         }
     }
 
     &:active {
         color: brig-color($accent-second, active);
+
+		&::before,
+		&::after {
+			background: brig-color($accent-second, active);
+		}
     }
 }
 //========================================================================================================================================================
@@ -173,7 +188,7 @@
     white-space: nowrap;
 
     &:active {
-        
+
         & .link-arrow__icon {
             background-color: brig-color($arrow-bg, 1.06);
         }
@@ -192,23 +207,23 @@
         }
 
         &:active {
-            
+
             & .link-arrow__icon {
                 background-color: create-rgba($light, .2);
             }
         }
 
         @media (any-hover: hover) {
-            
+
             &:hover {
-                
+
                 & .link-arrow__icon {
                     background-color: create-rgba($light, .2);
                 }
             }
 
             &:active {
-                
+
                 & .link-arrow__icon {
                     background-color: create-rgba($light, .1);
                 }
@@ -226,7 +241,7 @@
             @media (max-width: $tablet) {
                 margin-right: 12px;
             }
-        
+
             @media (max-width: $mobile-m) {
                 margin-right: 8px;
             }
@@ -241,15 +256,15 @@
     }
 
     @media (any-hover: hover) {
-        
+
         &:hover {
-            
+
             & .link-arrow__icon {
                 background-color: brig-color($arrow-bg, 1.06);
             }
 
             &.has-light-icon {
-            
+
                 & .link-arrow__icon {
                     background-color: brig-color($arrow-bg, 1.01);
                 }
@@ -257,7 +272,7 @@
         }
 
         &:active {
-            
+
             & .link-arrow__icon {
                 background-color: $arrow-bg;
             }
@@ -317,7 +332,7 @@
 
             & span {
                 opacity: .8;
-                box-shadow: inset 0 -1px create-rgba($light, .8); 
+                box-shadow: inset 0 -1px create-rgba($light, .8);
             }
         }
 

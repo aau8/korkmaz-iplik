@@ -1,0 +1,11 @@
+.production {
+	margin-bottom: 90px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 32px;
+	}
+}
