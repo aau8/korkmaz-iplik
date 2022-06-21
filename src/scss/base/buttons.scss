@@ -143,6 +143,41 @@
 }
 //========================================================================================================================================================
 
+// Кнопка "Поиск"
+.btn-search {
+	min-width: 50px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $accent;
+	border-radius: 50%;
+	transition: $tr;
+
+	& svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	&:active {
+		background: $accent-second;
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: $accent-second;
+		}
+
+		&:active {
+			background: $accent-second-hover;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
 
 // Hover-эффект у текстовых ссылок
 .link {
@@ -166,11 +201,11 @@
     }
 
     &:active {
-        color: brig-color($accent-second, active);
+        color: $accent-second-hover;
 
 		&::before,
 		&::after {
-			background: brig-color($accent-second, active);
+			background: $accent-second-hover;
 		}
     }
 }

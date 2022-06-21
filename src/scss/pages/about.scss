@@ -15,7 +15,7 @@
 }
 
 // Табы
-.about-tabs {
+.p-main-tabs {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -24,10 +24,11 @@
 
 	@media (max-width: $tablet) {
 		margin: -6px -10px;
+		margin-top: 16px;
 	}
 }
 
-.about-tabs__btn {
+.p-main-tabs__btn {
 	position: relative;
 	color: $text-primary-6;
 	margin: 6px 20px;

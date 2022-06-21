@@ -10,6 +10,14 @@
             margin-top: 40px;
         }
     }
+
+	&.is-left {
+		justify-content: flex-start;
+
+		@media (max-width: $mobile-l) {
+			justify-content: center;
+		}
+	}
 }
 
 .pagin__list {
@@ -97,17 +105,17 @@
         opacity: .3;
         pointer-events: none;
     }
-    
+
     &:active {
         opacity: .8;
     }
-    
+
     @media (any-hover: hover) {
-        
+
         &:hover {
             opacity: .8;
         }
-    
+
         &:active {
             opacity: .6;
         }

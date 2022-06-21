@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="p-main section_bg-main blog-main">
+            <div class="p-main__container">
+                <div class="p-header">
+                    <div class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item">Информация</li>
+                        </ul>
+                    </div>
+                    <div class="p-header__body">
+                        <div class="s-header">
+                            <div class="s-header__content">
+                                <h2 class="s-header__title">Полезная информация</h2>
+								<div class="p-main-tabs">
+									<button class="p-main-tabs__btn link is-active">Блог</button>
+									<button class="p-main-tabs__btn link">Мероприятия</button>
+								</div>
+                            </div>
+                        </div>
+						<div class="blog-main__body">
+							<div class="blog-main__content">
+								<h1 class="about-main__title">Статьи об уютном</h1>
+								<div class="blog-main__socials">
+									<span class="blog-main__socials-title">Присоединяйтесь:</span>
+									<div class="socials">
+										<a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#whatsapp'></use></svg></a>
+										<a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#telegram'></use></svg></a>
+										<a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#vk'></use></svg></a>
+										<a href="#" class="icon icon_m social__link"><svg><use href='./img/sprite.svg#facebook'></use></svg></a>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-decor_down">
+				<svg fill="none" viewBox="0 0 1920 189">
+					<path fill="#fff" d="M1920 0c-170.5 99-455.5 166-989.5 99S109 105.5 0 163v26h1920V0Z"/>
+					<path stroke="#2C2D2E" stroke-opacity=".3" d="M-29 203S248 37.5 684 95s593 91.5 903.5 50.5 340.5-127 340.5-127"/>
+				</svg>
+            </div>
+        </main>
+
+		<div class="content">
+            <div class="blog has-sidebar">
+                <div class="blog__container">
+                    <aside class="sidebar">
+                        <div class="sidebar__content">
+                            <form action="#" class="filter">
+                                <h3 class="s-header__subtitle filter__title">Темы статей:</h3>
+                                <div class="filter__list">
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Новая коллекция 2022" name="checkbox" title="Новая коллекция 2022">
+                                        <span class="checkbox__title">Новая коллекция 2022</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Текстильные бренды" name="checkbox" title="Текстильные бренды">
+                                        <span class="checkbox__title">Текстильные бренды</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="На заметку покупателю" name="checkbox" title="На заметку покупателю">
+                                        <span class="checkbox__title">На заметку покупателю</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Уход за текстилем" name="checkbox" title="Уход за текстилем">
+                                        <span class="checkbox__title">Уход за текстилем</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Текстиль по интересам" name="checkbox" title="Текстиль по интересам">
+                                        <span class="checkbox__title">Текстиль по интересам</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Тренды" name="checkbox" title="Тренды">
+                                        <span class="checkbox__title">Тренды</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Как утроено производство" name="checkbox" title="Как утроено производство">
+                                        <span class="checkbox__title">Как утроено производство</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input class="checkbox__input" type="checkbox" value="Подбор изделий" name="checkbox" title="Подбор изделий">
+                                        <span class="checkbox__title">Подбор изделий</span>
+                                    </label>
+                                </div>
+                                <div class="filter__buttons">
+                                    <button type="submit" class="btn is-fill filter__btn filter__show">Применить фильтр</button>
+                                    <button type="reset" class="btn is-linear filter__btn filter__reset">Сбросить фильтр</button>
+                                </div>
+                            </form>
+                        </div>
+                    </aside>
+                    <div class="blog__wrap">
+                        <div class="blog__header">
+							<form action="/" method="POST" class="search blog-search">
+								<label class="tf blog-search__tf">
+									<div class="tf__field">
+										<input type="text" name="user-">
+										<span class="tf__label">Поиск</span>
+									</div>
+								</label>
+								<button class="btn-search blog-search__btn">
+									<svg fill="none" viewBox="0 0 18 18">
+										<path fill="#fff" d="M8.21 2.08a6.14 6.14 0 1 0 .02 12.28A6.14 6.14 0 0 0 8.2 2.08Zm0 11.14A5 5 0 1 1 8.22 3.2a5 5 0 0 1 0 10.02Z"/>
+										<path fill="#fff" d="M15.84 15.04 12.6 11.8a.57.57 0 1 0-.8.8l3.24 3.24a.56.56 0 0 0 .8 0 .57.57 0 0 0 0-.8Z"/>
+									</svg>
+								</button>
+							</form>
+							<div class="blog__sort">
+								<div class="select blog__select has-dropdown-left">
+									<button class="select-input">
+										<span class="select-input__title">Выберите</span>
+										<input type="hidden" name="select">
+										<span class="select-input__chevron">
+											<svg fill="none" viewBox="0 0 12 12">
+												<path fill="#2C2D2E" fill-rule="evenodd" d="M11 4.25c0 .17-.08.33-.2.44L6.37 8.36a.6.6 0 0 1-.76 0L1.2 4.7a.57.57 0 0 1 0-.88l.2-.17a.6.6 0 0 1 .77 0L6 6.82l3.82-3.18a.6.6 0 0 1 .76 0l.21.17c.13.11.21.27.21.44Z" clip-rule="evenodd"/>
+											</svg>
+										</span>
+									</button>
+									<div class="select-dropdown">
+										<div class="select-dropdown__list">
+											<button class="select-dropdown__item is-selected">Самые популярные</button>
+											<button class="select-dropdown__item">Самые новые</button>
+											<button class="select-dropdown__item">Самые старые</button>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                        <div class="blog__list">
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/1.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/2.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/3.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/1.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/2.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/3.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/1.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/2.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="c-post">
+								<div class="c-post__img"><img src="@img/blog/3.jpg" alt=""></div>
+								<div class="c-post__content">
+									<div class="c-post__tools">
+										<span class="c-post__date">18.05.2022</span>
+									</div>
+									<div class="c-post__info">
+										<a href="#" class="c-post__link link">Новая коллекция 2022</a>
+										<span class="c-post__title">Уход за вязаными изделиями</span>
+										<p class="c-post__text">Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет. Для стирки используйте специальные средства с ланолином (для шерсти), шампунь для домашних питомцев тоже подойдет.</p>
+									</div>
+									<a href="#" class="link-arrow">
+										продолжить чтение
+										<span class="link-arrow__icon">
+											<svg><use href='./img/sprite.svg#arrow-triangle'></use></svg>
+										</span>
+									</a>
+								</div>
+							</div>
+                        </div>
+                        <div class="pagin has-mt is-left">
+                            <button class="pagin__btn pagin__btn_prev" disabled>
+                                <svg style="transform: rotate(180deg)" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08616 1.66699C7.36849 1.66704 7.63653 1.7936 7.81918 2.0131L13.938 9.36604C14.2425 9.73192 14.2425 10.2687 13.938 10.6346L7.81918 17.9876C7.63653 18.207 7.36849 18.3336 7.08616 18.3337C6.80384 18.3337 6.53576 18.2072 6.35303 17.9878L6.06158 17.6378C5.7569 17.272 5.75681 16.735 6.06136 16.369L11.3611 10.0003L6.06136 3.63166C5.75681 3.26568 5.7569 2.72869 6.06158 2.36282L6.35303 2.01284C6.53576 1.7934 6.80384 1.66694 7.08616 1.66699Z" fill="#2C2D2E"/>
+                                </svg>
+                            </button>
+                            <ul class="pagin__list">
+                                <li class="pagin__item pagin__item_current"><span>1</span></li>
+                                <li class="pagin__item"><a class="link" href="#">02</a></li>
+                                <li class="pagin__item"><a class="link" href="#">03</a></li>
+                                <li class="pagin__item"><span>...</span></li>
+                                <li class="pagin__item"><a class="link" href="#">08</a></li>
+                            </ul>
+                            <button class="pagin__btn pagin__btn_next">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08616 1.66699C7.36849 1.66704 7.63653 1.7936 7.81918 2.0131L13.938 9.36604C14.2425 9.73192 14.2425 10.2687 13.938 10.6346L7.81918 17.9876C7.63653 18.207 7.36849 18.3336 7.08616 18.3337C6.80384 18.3337 6.53576 18.2072 6.35303 17.9878L6.06158 17.6378C5.7569 17.272 5.75681 16.735 6.06136 16.369L11.3611 10.0003L6.06136 3.63166C5.75681 3.26568 5.7569 2.72869 6.06158 2.36282L6.35303 2.01284C6.53576 1.7934 6.80384 1.66694 7.08616 1.66699Z" fill="#2C2D2E"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- <button class="btn-more catalog__more">Показать еще</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('html/footer.html',{})
+	</div>
+
+    @@include('html/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

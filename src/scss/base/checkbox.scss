@@ -19,6 +19,17 @@
             border-color: $text-primary;
         }
     }
+
+	&:focus {
+
+        & + .checkbox__title {
+			color: $text-primary;
+
+			&:after {
+				border-color: $text-primary;
+			}
+        }
+	}
 }
 
 .checkbox__title {

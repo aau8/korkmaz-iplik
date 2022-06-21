@@ -16,6 +16,7 @@ $text-primary-4: create-rgba($text-primary, .4);
 $light: #fff;
 $accent: $text-primary;
 $accent-second: #FDAC19;
+$accent-second-hover: brig-color($accent-second, active);
 
 // Задний фон разделов
 $frame-main: #fafafa;
@@ -26,6 +27,7 @@ $frame-light: #F5F5F5;
 // Инпуты и кнопки
 $arrow-bg: #F2F2F2;
 $border-line: #999999;
+$border-card: #F2F2F2;
 $input-placeholder: #808182;
 
 // Радиусы
@@ -120,8 +122,9 @@ body {
 @import "./components/cards/c-cat";
 @import "./components/cards/c-product";
 @import "./components/cards/c-advant";
-@import "./components/cards/c-post";
+@import "./components/cards/c-news";
 @import "./components/cards/c-event";
+@import "./components/cards/c-post";
 
 // Стили частоиспользуемых секций
 @import "./sections/header";
@@ -145,3 +148,5 @@ body {
 @import "./pages/about";
 @import "./pages/production";
 @import "./pages/support";
+@import "./pages/blog";
+@import "./pages/post";

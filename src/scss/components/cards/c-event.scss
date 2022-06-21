@@ -1,6 +1,10 @@
 .c-event__slider {
 	// border-radius: $radius-s;
 	overflow: hidden;
+
+    @media (max-width: $container-width + 'px') {
+        overflow: hidden;
+    }
 }
 
 .c-event__slide {
@@ -18,12 +22,20 @@
 	@media (max-width: $tablet) {
 		margin-top: 16px;
 	}
+
+	@media (max-width: $mobile-l) {
+		padding: 24px;
+	}
 }
 
 .c-event__title {
 	font-size: 20px;
 	font-weight: 700;
 	line-height: lhperc(20, 28);
+
+	@media (max-width: $mobile-l) {
+		font-size: 18px;
+	}
 }
 
 .c-event__text {
