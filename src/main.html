@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper is-overflow-hidden">
         @@include('html/header.html',{})
 
 		<main class="main">
@@ -60,7 +60,7 @@
                         <div class="s-header__content">
                             <h2 class="s-header__title">Категории</h2>
                         </div>
-                        <div class="s-cat__arrows">
+                        <div class="arrows-slider s-cat__arrows">
                             <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_prev s-cat__arrow s-cat__arrow_prev swiper-button-lock"><svg style="transform: rotate(180deg);"><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
                             <button class="icon icon_m arrow-slider arrow-slider_round arrow-slider_next s-cat__arrow s-cat__arrow_next swiper-button-lock"><svg><use href='./img/sprite.svg#arrow-triangle'></use></svg></button>
                         </div>
@@ -311,7 +311,7 @@
                                         <span class="tf__field">
                                             <input type="text" name="tel-or-email">
                                             <span class="tf__label">Ваш номер телефона или E-mail</span>
-                                        </sp>
+                                        </span>
                                     </label>
                                     <button class="btn is-fill banner__submit">Заказать звонок</button>
                                 </form>

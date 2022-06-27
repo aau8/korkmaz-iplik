@@ -25,6 +25,7 @@
             letter-spacing: .08em;
 
             @media (max-width: $mobile-l) {
+				max-width: 32px;
                 top: 26px;
             }
         }
@@ -86,7 +87,7 @@
     color: $text-primary-4;
     line-height: lhperc(12, 20);
     margin: 6px 0 14px;
-    
+
     @include resVal(font-size, 12, 14, 450, 580);
 }
 

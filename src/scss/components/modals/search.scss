@@ -1,0 +1,30 @@
+.m-search {
+
+}
+
+.m-search__wrap {
+	align-items: flex-start;
+	padding: 0;
+	transform: translate(0, -100vh);
+}
+
+.m-search__window {
+	max-width: none;
+	border-radius: 0;
+}
+
+.m-search__content {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.m-search__form {
+	display: flex;
+	align-items: center;
+}
+
+.m-search__tf {
+	text-align: left;
+	margin-right: 24px;
+}

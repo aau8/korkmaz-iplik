@@ -1,6 +1,6 @@
-import Swiper, { EffectFade, Navigation, Pagination } from "swiper"
+import Swiper, { EffectFade, Grid, Navigation, Pagination } from "swiper"
 
-const mainSlider = new Swiper(".main-slider__container", {
+const mainSwiper = new Swiper(".main-slider__container", {
     modules: [ Navigation, Pagination, EffectFade ],
 
 
@@ -37,7 +37,65 @@ function mainPagin(currentClass, totalClass) {
 	return `<span class="${currentClass} slider__pagination-elem slider__pagination-current"></span><span class="slider__pagination-separator"></span><span class="${totalClass} slider__pagination-elem slider__pagination-total"></span>`
 }
 
-const sectionCategoriesSlider = new Swiper(".s-cat__body", {
+const productSwiper = new Swiper(".product-slider", {
+    modules: [ Navigation, Pagination, Grid ],
+
+	// direction: 'vertical',
+    // slidesPerView: 6,
+	// slidesPerGroup: 6,
+
+			grid: {
+				fill: 'row',
+				rows: 2,
+			},
+
+	breakpoints: {
+		920: {
+			direction: 'vertical',
+			slidesPerView: 6,
+			slidesPerGroup: 6,
+
+			grid: {
+				fill: 'column',
+				rows: 2,
+			},
+		},
+		600: {
+			direction: 'horizontal',
+			slidesPerView: 8,
+			slidesPerGroup: 8,
+
+			grid: {
+				fill: 'row',
+				rows: 2,
+			},
+		},
+		0: {
+			direction: 'horizontal',
+			slidesPerView: 6,
+			slidesPerGroup: 6,
+
+			grid: {
+				fill: 'row',
+				rows: 2,
+			},
+		}
+	},
+
+    pagination: {
+        el: ".product-slider__pagination",
+        type: "bullets",
+		clickable: true,
+		renderBullet: ( i, className ) => `<div class="${className} product-slider__bullet">${i + 1}</div>`
+    },
+
+    navigation: {
+        nextEl: ".product-slider__arrow_next",
+        prevEl: ".product-slider__arrow_prev",
+    },
+})
+
+const sectionCategoriesSwiper = new Swiper(".s-cat__body", {
     modules: [ Navigation ],
 
     allowTouchMove: false,
@@ -78,7 +136,7 @@ const sectionCategoriesSlider = new Swiper(".s-cat__body", {
     },
 });
 
-const sectionBestSlider = new Swiper(".s-best__slider", {
+const sectionBestSwiper = new Swiper(".s-best__slider", {
     modules: [ Navigation ],
 
     allowTouchMove: false,
@@ -118,7 +176,7 @@ const sectionBestSlider = new Swiper(".s-best__slider", {
     },
 });
 
-const sectionEventSlider = new Swiper(".s-event__slider", {
+const sectionEventSwiper = new Swiper(".s-event__slider", {
     modules: [ Navigation ],
 
     allowTouchMove: false,
@@ -159,7 +217,7 @@ const sectionEventSlider = new Swiper(".s-event__slider", {
     },
 });
 
-const cardEventSlider = new Swiper(".c-event__slider", {
+const cardEventSwiper = new Swiper(".c-event__slider", {
     modules: [ Navigation, Pagination ],
 
 	slidesPerView: 1,
@@ -177,9 +235,7 @@ const cardEventSlider = new Swiper(".c-event__slider", {
     },
 });
 
-// console.log(cardEventSlider.navigation.nextEl)
-
-const sectionPartnersSlider = new Swiper(".s-partners__body", {
+const sectionPartnersSwiper = new Swiper(".s-partners__body", {
     modules: [ Navigation ],
 
     allowTouchMove: false,

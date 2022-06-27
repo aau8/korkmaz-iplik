@@ -122,9 +122,9 @@
         @media (max-width: $hide-menu) {
             width: 100%;
         }
-        
+
         & a {
-            
+
             @media (max-width: $hide-menu) {
                 width: 100%;
                 display: block;
@@ -190,6 +190,26 @@
     min-width: 20px;
     width: 20px;
     height: 20px;
+
+	&[data-favorite] {
+		position: relative;
+
+		&::before {
+			content: attr(data-favorite);
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(50%, -50%);
+			width: 16px;
+			height: 16px;
+			background: $accent-second;
+			border-radius: 50%;
+			font-size: 11px;
+			color: $light;
+			line-height: 16px;
+			text-align: center;
+		}
+	}
 }
 
 .header__tel {

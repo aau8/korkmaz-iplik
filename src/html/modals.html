@@ -1,13 +1,88 @@
-<!-- <div class="modal" data-modal-id="modal" data-close-on-bg>
+<div class="modal m-callback" data-modal-id="callback" data-close-on-bg>
     <div class="modal__wrap">
-        <div class="modal__window">
-
-            <button class="burger is-active modal-close" data-modal-close>
-                <span></span>
+        <div class="modal__window m-callback__window">
+            <button class="modal-close" data-modal-close>
                 <span></span>
                 <span></span>
             </button>
+
+			<div class="modal__content m-callback__content">
+				<div class="m-callback__header">
+					<h2 class="s-header__title m-callback__title">Заказать обратный&nbsp;звонок</h2>
+					<p class="m-callback__text">Мы свяжемся с Вам в ближайшее время и ответим на все вопросы</p>
+				</div>
+				<form action="./" class="m-callback__form">
+					<label class="tf has-text-center">
+						<div class="tf__field">
+							<input type="text" name="user-">
+							<span class="tf__label">Ваше ИМЯ</span>
+						</div>
+					</label>
+					<label class="tf has-text-center">
+						<div class="tf__field">
+							<input type="text" name="user-">
+							<span class="tf__label">Ваш НОМЕР телефона или E-MAIL*</span>
+						</div>
+					</label>
+					<label class="tf has-text-center is-linear">
+						<div class="tf__field">
+							<textarea type="text" name="user-"></textarea>
+							<span class="tf__label">Опишите свою проблему или задайте свой ВОПРОС</span>
+						</div>
+					</label>
+					<button type="submit" class="btn is-fill m-callback__send">Отправить заявку</button>
+					<p class="text m-callback__correct">Нажимая на кнопку “Отправить заявку” я согласен на обработку <a href="#">персональных данных</a></p>
+				</form>
+			</div>
         </div>
         <div class="modal__bg"></div>
     </div>
-</div> -->
+</div>
+<div class="modal m-success" data-modal-id="success" data-close-on-bg>
+    <div class="modal__wrap">
+        <div class="modal__window m-success__window">
+            <button class="modal-close" data-modal-close>
+                <span></span>
+                <span></span>
+            </button>
+
+			<div class="modal__content m-callback__content">
+				<div class="m-success__icon">
+					<svg fill="none" viewBox="0 0 66 66">
+						<circle cx="33" cy="33" r="33" fill="#FDAC19"/>
+						<path fill="#FDAC19" d="M54.27 30.73v1.96A21.32 21.32 0 1 1 41.63 13.2"/>
+						<path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.27 30.73v1.96A21.32 21.32 0 1 1 41.63 13.2"/>
+						<path fill="#FDAC19" d="M54.27 15.63 32.95 36.97l-6.4-6.4"/>
+						<path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M54.27 15.63 32.95 36.97l-6.4-6.4"/>
+					</svg>
+				</div>
+				<div class="m-success__title">Ваша заявка отправлена</div>
+				<p class="m-success__text text">Если у вас отсались дополнительные вопросы, тех. поддержка <a href="mailto:support@korkmaziplik.ru">support@korkmaziplik.ru</a></p>
+			</div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>
+<div class="modal m-search" data-modal-id="search" data-close-on-bg>
+    <div class="modal__wrap m-search__wrap">
+        <div class="modal__window m-search__window">
+            <button class="modal-close" data-modal-close>
+                <span></span>
+                <span></span>
+            </button>
+
+			<div class="m-search__content">
+				<form action="#" class="m-search__form">
+					<label class="tf m-search__tf">
+						<div class="tf__field">
+							<input type="text" name="user-">
+							<span class="tf__label">Поиск</span>
+						</div>
+					</label>
+					<button class="btn is-fill">Найти</button>
+				</form>
+			</div>
+        </div>
+        <div class="modal__bg"></div>
+    </div>
+</div>

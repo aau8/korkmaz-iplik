@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     // overflow: hidden;
+
+	&.is-overflow-hidden {
+		overflow: hidden;
+	}
 }
 
 // Основной контент
@@ -121,6 +125,10 @@
 .section {
 	position: relative;
     margin: 100px 0;
+
+	&.is-overflow-hidden {
+		overflow: hidden;
+	}
 
     @media (max-width: $tablet) {
         margin: 80px 0;
@@ -349,4 +357,55 @@
     }
 }
 
-//
+// Изменить кол-во
+.quant {
+	display: flex;
+	align-items: center;
+}
+
+.quant__btn {
+	width: 46px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: 700;
+	background: $light;
+	border-radius: 50%;
+	transition: $tr;
+
+	&_reduce {
+
+	}
+
+	&_increase {
+
+	}
+
+	&:disabled {
+		color: $text-primary-4;
+		pointer-events: none;
+	}
+
+	&:active {
+
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: brig-color($light, 1.05);
+		}
+
+		&:active {
+			background: brig-color($light, 1.1);
+		}
+	}
+}
+
+.quant__value {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 14px;
+}

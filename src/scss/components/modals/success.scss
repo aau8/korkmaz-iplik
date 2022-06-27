@@ -1,0 +1,26 @@
+.m-success__icon {
+	width: 66px;
+	height: 66px;
+	margin: 0 auto;
+}
+
+.m-success__title {
+	font-size: 28px;
+	line-height: 1.4;
+	margin-top: 16px;
+}
+
+.m-success__text {
+	color: $text-primary-6;
+	line-height: 1.4;
+	margin-top: 28px;
+
+	& a {
+		color: $accent-second;
+		box-shadow: inset 0 -1px $accent-second;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-top: 24px;
+	}
+}

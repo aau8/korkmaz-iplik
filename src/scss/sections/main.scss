@@ -177,11 +177,16 @@
 .main-slider__container {
     width: 100%;
     max-width: 534px;
-    border-radius: $radius-l;
-    overflow: hidden;
+    // border-radius: $radius-l;
+    // overflow: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+	& .swiper-slide {
+		border-radius: $radius-l;
+		overflow: hidden;
+	}
 
     @media (max-width: $tablet) {
         max-width: none;

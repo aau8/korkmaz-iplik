@@ -126,6 +126,11 @@ body {
 @import "./components/cards/c-event";
 @import "./components/cards/c-post";
 
+// Модальные окна
+@import "./components/modals/callback";
+@import "./components/modals/success";
+@import "./components/modals/search";
+
 // Стили частоиспользуемых секций
 @import "./sections/header";
 @import "./sections/main";
@@ -150,3 +155,4 @@ body {
 @import "./pages/support";
 @import "./pages/blog";
 @import "./pages/post";
+@import "./pages/product";

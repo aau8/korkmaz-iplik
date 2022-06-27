@@ -85,7 +85,7 @@ export function acc() {
  */
  export class Modals {
     attrs = {
-        modalId: 'data-new-modal-id',
+        modalId: 'data-modal-id',
         modalCloseOnBg: 'data-close-on-bg',
         btnModalOpen: 'data-modal-open',
         btnModalClose: 'data-modal-close',

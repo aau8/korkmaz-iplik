@@ -27,24 +27,60 @@
     }
 
     & textarea {
-        height: 80%;
-        padding: 16px 24px;
+        // height: 80%;
+        padding: 19px 24px;
         resize: none;
 
-        @include scrollbar(4px, 100%, #fff, rgba(255,255,255,.1))
+        @include scrollbar(4px, 100%, #fff, rgba(255,255,255,.1));
     }
 
     &.has-change-label {
 
         & .tf__label {
-            transform: translate(100px, -12px);
+            transform: translate(100px, -50%);
             opacity: 0;
 
-            @media (max-width: $mobile-l) {
-                transform: translate(100px, -10px);
-            }
+            // @media (max-width: $mobile-l) {
+                // transform: translate(100px, -10px);
+            // }
         }
     }
+
+	&.has-text-center {
+		text-align: center;
+
+		& input,
+		& textarea {
+			text-align: center;
+		}
+
+		& .tf__label {
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 0 16px;
+
+			@media (max-width: $mobile-l) {
+				font-size: 12px;
+			}
+		}
+
+		&.has-change-label {
+
+			& .tf__label {
+				transform: translate(-50%, -50px);
+			}
+		}
+	}
+
+	&.is-linear {
+
+		& textarea,
+		& input {
+			border: none;
+			border-bottom: 1px solid $border-line;
+			border-radius: 0;
+		}
+	}
 
     &.has-error {
 
@@ -95,6 +131,7 @@
 	top: 50%;
 	left: 30px;
 	transform: translate(0, -50%);
+	width: 100%;
 	font-size: 14px;
 	font-weight: 400;
 	color: $text-primary-6;
