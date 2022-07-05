@@ -40,14 +40,15 @@ function mainPagin(currentClass, totalClass) {
 const productSwiper = new Swiper(".product-slider", {
     modules: [ Navigation, Pagination, Grid ],
 
+	allowTouchMove: false,
 	// direction: 'vertical',
     // slidesPerView: 6,
 	// slidesPerGroup: 6,
 
-			grid: {
-				fill: 'row',
-				rows: 2,
-			},
+	grid: {
+		fill: 'row',
+		rows: 2,
+	},
 
 	breakpoints: {
 		920: {

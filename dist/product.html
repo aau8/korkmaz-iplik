@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220705160856">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220705202126">
 </head>
 <body>
 	<div class="wrapper is-overflow-hidden">
@@ -81,13 +81,13 @@
                             <li class="breadcrumbs__item"><a class="link" href="#">Главная</a></li>
                             <li class="breadcrumbs__item"><a class="link" href="#">Пряжа</a></li>
                             <li class="breadcrumbs__item"><a class="link" href="#">Вискоза-Акрил 20/2</a></li>
-                            <li class="breadcrumbs__item">Пряжа Вискоза-Акрил 20/2, цвет 8026</li>
+                            <li class="breadcrumbs__item">Пряжа Вискоза-Акрил 20/2, цвет <span></span></li>
                         </ul>
                     </div>
                     <div class="p-header__body">
                         <div class="s-header">
                             <div class="s-header__content">
-                                <h2 class="s-header__title">Пряжа Вискоза-Акрил 20/2, цвет 8026</h2>
+                                <h2 class="s-header__title product-main__title">Пряжа Вискоза-Акрил 20/2, цвет <span>8026</span></h2>
                             </div>
                             <div class="s-header__more">
                                 <a href="#" class="link-arrow is-reverse has-light-icon">
@@ -105,13 +105,13 @@
 						<div class="swiper-slider product-slider">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<button class="product-color is-active" data-info="">
+									<button class="product-color" data-color="8001" data-info='{"img":"./img/products/1.jpg","color":8001,"isNew":true,"isFavorite":true,"isAvailable":true,"article":56004062,"weight":1700,"price":790,"structure":[["Шерсть",70],["Акрил",30]]}'>
 										<div class="product-color__img" style="background-color: #896195;"></div>
 										<span class="product-color__code">8001</span>
 									</button>
 								</div>
 								<div class="swiper-slide">
-									<button class="product-color">
+									<button class="product-color" data-color="8002" data-info='{"img":"./img/products/1.jpg","color":8002,"isNew":false,"isFavorite":false,"isAvailable":false,"article":5322062,"weight":2200,"price":7930,"structure":[["Шерсть",90],["Акрил",10]]}'>
 										<div class="product-color__img" style="background-color: #896195;"></div>
 										<span class="product-color__code">8002</span>
 									</button>
@@ -485,17 +485,17 @@
 					</div>
 					<div class="product__content">
 						<div class="product__content-header">
-							<span class="product__article">Арт.: 56004062</span>
+							<span class="product__article">Арт.: <span></span></span>
 							<!-- is-not - нет в наличии -->
 							<span class="product__availability">В наличии</span>
 						</div>
 						<div class="product__param-list">
-							<span class="product__param"><b>Вес бобины:</b> 1 700 граммов</span>
-							<span class="product__param"><b>Состав:</b> 70% шерсть, 30% акрил</span>
+							<span class="product__param product__param-weight"><b>Вес бобины:</b> <span></span> граммов</span>
+							<span class="product__param product__param-structure"><b>Состав:</b> <span></span></span>
 						</div>
 						<div class="product__price">
 							<p class="product__price-unit">Цена указана за 1 кг</p>
-							<p class="product__price-general">790 ₽</p>
+							<p class="product__price-general"><span>790</span> ₽</p>
 						</div>
 						<div class="product__quantity">
 							<span class="product__quantity-title">Количество:</span>
@@ -772,6 +772,6 @@
         <div class="modal__bg"></div>
     </div>
 </div>
-    <script src="./js/bundle.min.js?_v=20220705160856"></script>
+    <script src="./js/bundle.min.js?_v=20220705202126"></script>
 </body>
 </html>
