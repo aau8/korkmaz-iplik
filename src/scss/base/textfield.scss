@@ -20,14 +20,9 @@
         &:focus {
             border-color: $text-primary;
         }
-
-        @media (max-width: $mobile-l) {
-            --tf-height: 50px;
-        }
     }
 
     & textarea {
-        // height: 80%;
         padding: 19px 24px;
         resize: none;
 
@@ -123,6 +118,10 @@
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+
+	@media (max-width: $mobile-l) {
+		--tf-height: 44px;
+	}
 }
 
 .tf__label {
@@ -140,7 +139,6 @@
 	pointer-events: none;
 
 	@media (max-width: $mobile-l) {
-		// font-size: 15px;
 		transform: translate(0, -10px);
 	}
 }

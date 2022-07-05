@@ -103,6 +103,7 @@ export function acc() {
     useHash = true
     historyHash = !this.useHash ? false : false
     hash = null
+	menuClose = true
 
     constructor(options) {
         this.init()
@@ -125,6 +126,11 @@ export function acc() {
         this.modalIsShow = true
         this.modalShow = modal
         this.modalShowId = modal.dataset.modalId
+
+		if ( this.menuClose ) {
+			document.querySelector('.menu').classList.remove('is-show')
+			document.querySelector('.burger').classList.remove('is-active')
+		}
 
         this.modalBgClose()
         modal.classList.add(this.classNames.modalShow)

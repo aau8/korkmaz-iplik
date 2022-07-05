@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20220628000001">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20220705160856">
 </head>
 <body class="light-bg">
 	<div class="wrapper">
@@ -15,6 +15,23 @@
             <a href="#" class="logo is-multiply header__logo"><picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.jpg" alt=""></picture></a>
             <div class="menu">
                 <div class="menu__wrap">
+					<div class="menu__header">
+						<div class="search">
+							<button class="icon icon_l search__btn" data-modal-open="search">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.03726 1.53857C4.90233 1.53857 1.53809 4.90282 1.53809 9.03775C1.53809 13.1729 4.90233 16.5369 9.03726 16.5369C13.1724 16.5369 16.5364 13.1729 16.5364 9.03775C16.5364 4.90282 13.1724 1.53857 9.03726 1.53857ZM9.03726 15.1525C5.66563 15.1525 2.92255 12.4094 2.92255 9.03778C2.92255 5.66616 5.66563 2.92304 9.03726 2.92304C12.4089 2.92304 15.152 5.66612 15.152 9.03775C15.152 12.4094 12.4089 15.1525 9.03726 15.1525Z" fill="#2C2D2E"/>
+									<path d="M18.3641 17.3857L14.3953 13.4169C14.1249 13.1465 13.6869 13.1465 13.4165 13.4169C13.146 13.6871 13.146 14.1255 13.4165 14.3958L17.3853 18.3646C17.5205 18.4998 17.6975 18.5674 17.8747 18.5674C18.0517 18.5674 18.2289 18.4998 18.3641 18.3646C18.6345 18.0944 18.6345 17.6559 18.3641 17.3857Z" fill="#2C2D2E"/>
+								</svg>
+							</button>
+						</div>
+						<div class="favorite">
+							<button class="icon icon_l favorite__btn" data-favorite="3">
+								<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.0008 8.99992L14.746 7.8023C11.8008 4.99105 6.40028 5.23928 4.45078 8.77366C3.53553 10.436 3.32903 12.8362 5.00028 15.8993C6.61028 18.8487 9.95978 22.3814 16.0008 26.2294C22.0418 22.3814 25.3895 18.8487 27.0013 15.8993C28.6725 12.8345 28.4678 10.436 27.5508 8.77366C25.6013 5.23928 20.2008 4.98942 17.2555 7.80067L16.0008 8.99992ZM16.0008 28.1875C-10.832 11.723 7.50011 -1.8009 15.6928 6.3918C15.7978 6.48117 15.901 6.5738 16.0008 6.66967C16.0995 6.57389 16.6767 6.08831 16.7832 6C24.7352 -0.80225 42.8335 11.7214 16.0008 28.1875Z" fill="#2C2D2E"/>
+								</svg>
+							</button>
+						</div>
+					</div>
                     <ul class="menu__list">
                         <li><a href="#" class="link">Пряжа</a></li>
                         <li><a href="#" class="link">Доставка</a></li>
@@ -22,6 +39,9 @@
                         <li><a href="#" class="link">Информация</a></li>
                         <li><a href="#" class="link">Контакты</a></li>
                     </ul>
+					<div class="menu__footer">
+						<a href="#" class="link menu__tel">+ 7 (918) 408-12-04</a>
+					</div>
                 </div>
             </div>
             <div class="header__right">
@@ -572,7 +592,7 @@
 <div class="modal m-search" data-modal-id="search" data-close-on-bg>
     <div class="modal__wrap m-search__wrap">
         <div class="modal__window m-search__window">
-            <button class="modal-close" data-modal-close>
+            <button class="modal-close m-search__modal-close" data-modal-close>
                 <span></span>
                 <span></span>
             </button>
@@ -585,13 +605,13 @@
 							<span class="tf__label">Поиск</span>
 						</div>
 					</label>
-					<button class="btn is-fill">Найти</button>
+					<button class="btn is-fill m-search__btn-search">Найти</button>
 				</form>
 			</div>
         </div>
         <div class="modal__bg"></div>
     </div>
 </div>
-    <script src="./js/bundle.min.js?_v=20220628000001"></script>
+    <script src="./js/bundle.min.js?_v=20220705160856"></script>
 </body>
 </html>

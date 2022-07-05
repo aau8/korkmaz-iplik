@@ -1,5 +1,6 @@
 .m-search {
 
+	background: transparent;
 }
 
 .m-search__wrap {
@@ -11,6 +12,18 @@
 .m-search__window {
 	max-width: none;
 	border-radius: 0;
+
+	@media (max-width: $laptop) {
+		padding: 60px 24px 40px;
+	}
+}
+
+.m-search__modal-close {
+
+	@media (max-width: $laptop) {
+		top: 16px;
+		right: 16px;
+	}
 }
 
 .m-search__content {
@@ -22,9 +35,24 @@
 .m-search__form {
 	display: flex;
 	align-items: center;
+
+	@media (max-width: $mobile-l) {
+		flex-direction: column;
+	}
 }
 
 .m-search__tf {
 	text-align: left;
 	margin-right: 24px;
+
+	@media (max-width: $mobile-l) {
+		margin: 0 0 12px 0;
+	}
+}
+
+.m-search__btn-search {
+
+	@media (max-width: $mobile-l) {
+		width: 100%;
+	}
 }

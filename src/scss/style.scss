@@ -50,6 +50,10 @@ $max-width-container: 1480;
 $container-padding: 24;
 $container-width: $max-width-container + $container-padding * 2;
 
+:root {
+	--container-padding: 24px;
+}
+
 $laptop-l: 1500px;
 $laptop: 1100px;
 $tablet: 800px;
@@ -86,18 +90,19 @@ body {
 Например header__container, main__container и т.д.
 */
 [class*="__container"] {
+
     @if ($max-width-container>0) {
         max-width: rem($max-width-container);
         box-sizing: content-box;
         margin: 0 auto;
     }
     @if ($container-padding>0) {
-        padding: 0 rem($container-padding);
+        padding: 0 var(--container-padding);
     }
 
-    @media (max-width: $mobile-l) {
-        padding: 0 rem(16);
-    }
+	@media (max-width: $mobile-l) {
+		--container-padding: 16px;
+	}
 }
 
 // Анимации
