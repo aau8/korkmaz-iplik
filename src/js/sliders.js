@@ -1,11 +1,12 @@
-import Swiper, { EffectFade, Grid, Navigation, Pagination } from "swiper"
+import Swiper, { EffectFade, Grid, Navigation, Pagination, Autoplay } from "swiper"
 
 const mainSwiper = new Swiper(".main-slider__container", {
-    modules: [ Navigation, Pagination, EffectFade ],
-
+    modules: [ Navigation, Pagination, EffectFade, Autoplay ],
 
     slidesPerView: 1,
     spaceBetween: 0,
+	loop: true,
+	autoplay: true,
 
     breakpoints: {
         768: {
